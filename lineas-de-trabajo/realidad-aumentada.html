@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Realidad aumentada · UMIB-IA</title>
+<meta name="description" content="Visualización 3D de imagen médica en web, móvil y con dispositivos de realidad aumentada como HoloLens 2, con aplicaciones en asistencia quirúrgica.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/marca/UMIBIA - color.png">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav__logo"><img src="../assets/marca/UMIBIA - color.png" alt="UMIB-IA — Imagen Biomédica e IA"></a>
+    <ul class="nav__links">
+      <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+      <li class="nav__item">
+        <a href="../lineas-de-trabajo.html" class="nav__link">Líneas de trabajo
+          <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <div class="nav__submenu">
+          <a href="anonimizacion.html">Anonimización y seudonimización</a>
+          <a href="datalakes.html">Datalakes y curación del dato</a>
+          <a href="analisis-ia.html">Análisis de datos con IA</a>
+          <a href="realidad-aumentada.html" aria-current="page">Realidad aumentada</a>
+          <a href="proyectos-europeos.html">Proyectos europeos</a>
+        </div>
+      </li>
+      <li class="nav__item"><a href="../resultados.html" class="nav__link">Resultados</a></li>
+      <li class="nav__item"><a href="../infraestructura.html" class="nav__link">Infraestructura</a></li>
+      <li class="nav__item"><a href="../contacto.html" class="nav__link">Contacto</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile">
+    <a href="../index.html">Inicio</a>
+    <button class="nav__accordion-toggle" aria-expanded="false">Líneas de trabajo
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav__accordion-panel">
+      <a href="../lineas-de-trabajo.html">Ver todas las líneas →</a>
+      <a href="anonimizacion.html">Anonimización y seudonimización</a>
+      <a href="datalakes.html">Datalakes y curación del dato</a>
+      <a href="analisis-ia.html">Análisis de datos con IA</a>
+      <a href="realidad-aumentada.html">Realidad aumentada</a>
+      <a href="proyectos-europeos.html">Proyectos europeos</a>
+    </div>
+    <a href="../resultados.html">Resultados</a>
+    <a href="../infraestructura.html">Infraestructura</a>
+    <a href="../contacto.html">Contacto</a>
+  </div>
+</nav>
+
+<header class="cover page-cover">
+  <div class="cover__blobs" aria-hidden="true"><img src="../assets/marca/icon-outline-white.png" alt="" class="cover__mark"><div class="blob blob--2"></div><div class="blob blob--3"></div></div>
+  <div class="wrap">
+    <p class="page-cover__breadcrumb reveal"><a href="../index.html">Inicio</a> / <a href="../lineas-de-trabajo.html">Líneas de trabajo</a> / Realidad aumentada</p>
+    <p class="eyebrow reveal">REALIDAD AUMENTADA</p>
+    <h1 class="reveal dot-accent">Realidad aumentada</h1>
+    <p class="page-cover__intro reveal">Virtualización de imagen médica con visualización 3D accesible desde web y smartphone, y con dispositivos de realidad aumentada como HoloLens 2 para asistencia quirúrgica y neuroquirúrgica.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid grid-2 stagger">
+
+      <div class="card project-card reveal">
+        <span class="tag">WEB · SMARTPHONE</span>
+        <div class="media-frame" style="background:#000;"><img src="../assets/linea-4-realidad-aumentada/image101.jpeg" alt="Visualización 3D de cerebro con biomarcadores de imagen médica coloreados por región"></div>
+        <h3>3D-MI-Reports — virtualización de imagen médica</h3>
+        <p>Nuevo concepto de visualización de biomarcadores de imagen médica a través de web y smartphone: visualización gráfica rápida de estadísticas cerebrales mediante tres segmentos diferentes.</p>
+        <div class="project-card__links">
+          <a class="link-ext" href="https://bimcv-csusp.github.io/3D-MI-Reports/brain-visualization/" target="_blank" rel="noopener">Ver demo ↗</a>
+          <a class="link-ext" href="https://github.com/BIMCV-CSUSP/3D-MI-Reports" target="_blank" rel="noopener">Ver en GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="card project-card reveal">
+        <span class="tag">RECONSTRUCCIÓN 3D</span>
+        <div class="grid" style="grid-template-columns:1fr 1fr 1fr;gap:8px;">
+          <div class="media-frame" style="aspect-ratio:1/1;"><img src="../assets/linea-4-realidad-aumentada/image103.png" alt="MRI original de columna lumbar sin segmentar"></div>
+          <div class="media-frame" style="aspect-ratio:1/1;"><img src="../assets/linea-4-realidad-aumentada/image104.png" alt="Segmentación por colores de vértebras, discos, nervios, tejido epidural y músculo"></div>
+          <div class="media-frame" style="aspect-ratio:1/1;background:#000;"><img src="../assets/linea-4-realidad-aumentada/image105.png" alt="Reconstrucción volumétrica 3D navegable de la columna vertebral"></div>
+        </div>
+        <h3 style="margin-top:16px;">Reconstrucción 3D de columna vertebral y tejidos abdominales</h3>
+        <p>A partir de resonancia magnética: segmentación de estructuras (vértebras, discos, nervios, tejido epidural, músculo) → reconstrucción volumétrica 3D navegable.</p>
+      </div>
+
+      <div class="card project-card reveal" style="grid-column:1/-1;">
+        <span class="tag">HOLOLENS 2</span>
+        <div class="split" style="align-items:center;">
+          <div class="media-frame contain"><img src="../assets/linea-4-realidad-aumentada/image106.jpeg" alt="Vista a través de HoloLens 2 del menú Visibilidad con capas Vértebras, Discos, Nervios, S. Epidural y Músculos superpuestas sobre el modelo 3D de columna"></div>
+          <div>
+            <h3>Asistencia quirúrgica con HoloLens 2</h3>
+            <p>Visualización de la columna vertebral reconstruida mediante gafas de realidad aumentada HoloLens 2, superpuesta sobre el campo quirúrgico real.</p>
+            <ul style="margin-top:12px;">
+              <li style="margin-bottom:8px;padding-left:18px;position:relative;color:var(--text-secondary);font-size:0.92rem;"><span style="position:absolute;left:0;color:var(--coral);">•</span>Control mediante gestos de la mano, sin herramientas adicionales.</li>
+              <li style="margin-bottom:8px;padding-left:18px;position:relative;color:var(--text-secondary);font-size:0.92rem;"><span style="position:absolute;left:0;color:var(--coral);">•</span>Visualización de tejidos y huesos no visibles a simple vista durante la operación.</li>
+              <li style="padding-left:18px;position:relative;color:var(--text-secondary);font-size:0.92rem;"><span style="position:absolute;left:0;color:var(--coral);">•</span>Próximos pasos: control por voz y seguimiento de mirada (eye-tracking).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="media-frame" style="margin-top:20px;aspect-ratio:16/9;">
+          <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;">
+            <source src="../assets/linea-4-realidad-aumentada/media1.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de vídeo.
+          </video>
+        </div>
+        <p style="font-size:0.82rem;margin-top:10px;">Demostración en vídeo de la asistencia quirúrgica con HoloLens 2. <a class="link-ext" href="../assets/linea-4-realidad-aumentada/media2.mp4" target="_blank" rel="noopener">Ver grabación completa de la sesión ↗</a></p>
+      </div>
+
+      <div class="card project-card reveal">
+        <span class="tag">NEUROCIRUGÍA</span>
+        <div class="media-frame contain"><img src="../assets/linea-4-realidad-aumentada/image109.png" alt="Visor ARTEMISA en HoloLens con cortes sagital, axial y coronal superpuestos en realidad aumentada, con control deslizante por plano"></div>
+        <h3>ARTEMISA — visualización neuroquirúrgica</h3>
+        <p>Visor con cortes sagital, axial y coronal superpuestos en AR sobre modelo físico/paciente, con control deslizante por plano.</p>
+      </div>
+
+      <div class="card project-card reveal">
+        <span class="tag">SEGMENTACIÓN TUMORAL</span>
+        <div class="media-frame contain"><img src="../assets/linea-4-realidad-aumentada/image107.png" alt="Visualización holográfica de superficie cerebral con habitats tumorales diferenciados: Brain Surface, Habitat 1 Necrosis, Habitat 2 Edema, Habitat 3 Tumor"></div>
+        <h3>Segmentación tumoral en AR</h3>
+        <p>Visualización holográfica de superficie cerebral con habitats tumorales diferenciados (necrosis, edema, tumor) y checklist interactiva de capas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2 class="dot-accent">Más allá de España: proyectos europeos</h2>
+      <p style="color:var(--text-on-dark-secondary);max-width:52ch;margin:0 auto 8px;">Participamos en consorcios internacionales donde la imagen médica mejora la atención sanitaria real.</p>
+      <div class="cta-band__actions"><a href="proyectos-europeos.html" class="btn btn-primary">Proyectos europeos →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><img src="../assets/marca/icon-outline-white.png" alt="" class="footer__mark">
+  <div class="wrap">
+    <div class="footer__logos"><img src="../assets/marca/Convivencia 1 - UMIBIA - blanco - sin Barra.png" alt="Generalitat Valenciana · ACI·ARA · Fundació Fisabio · Imagen Biomédica e IA"></div>
+    <div class="footer__grid">
+      <div><p class="footer__tagline">Unidad Mixta de Imagen Biomédica e Inteligencia Artificial · FISABIO-CIPF</p></div>
+      <div><h4>Sitio</h4><ul>
+        <li><a href="../index.html">Inicio</a></li><li><a href="../lineas-de-trabajo.html">Líneas de trabajo</a></li>
+        <li><a href="../resultados.html">Resultados</a></li><li><a href="../infraestructura.html">Infraestructura</a></li>
+        <li><a href="../contacto.html">Contacto</a></li></ul></div>
+      <div><h4>Recursos externos</h4><ul>
+        <li><a href="https://fisabio.san.gva.es/es/apoyo-a-la-investigacion/plataformas-y-servicios-cientifico-tecnicos/servicios-cientifico-tecnologicos/fisabio-cipf/" target="_blank" rel="noopener">Web oficial FISABIO-CIPF ↗</a></li>
+        <li><a href="https://bimcv.cipf.es/" target="_blank" rel="noopener">BIMCV — Banco de Imágenes Médicas ↗</a></li>
+        <li><a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener">GitHub — BIMCV-CSUSP ↗</a></li></ul></div>
+      <div><h4>Contacto</h4><ul>
+        <li><a href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></li><li>+34 961 925 700</li>
+        <li>Avda. de Catalunya, 21 · 46020 Valencia</li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> UMIB-IA · Fundació Fisabio</span>
+      <span><a href="https://fisabio.san.gva.es/es/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a><a href="https://fisabio.san.gva.es/es/fisabio/fisabio-abierta-portal-de-transparencia/proteccion-de-datos-y-privacidad/ejercicio-de-derechos/" target="_blank" rel="noopener">Política de privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

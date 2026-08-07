@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Infraestructura · UMIB-IA</title>
+<meta name="description" content="Hardware y software propio de UMIB-IA: nodos de computación, GPUs, almacenamiento y la galería de repositorios de código abierto en GitHub.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/marca/UMIBIA - color.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav__logo"><img src="assets/marca/UMIBIA - color.png" alt="UMIB-IA — Imagen Biomédica e IA"></a>
+    <ul class="nav__links">
+      <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+      <li class="nav__item">
+        <a href="lineas-de-trabajo.html" class="nav__link">Líneas de trabajo
+          <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <div class="nav__submenu">
+          <a href="lineas-de-trabajo/anonimizacion.html">Anonimización y seudonimización</a>
+          <a href="lineas-de-trabajo/datalakes.html">Datalakes y curación del dato</a>
+          <a href="lineas-de-trabajo/analisis-ia.html">Análisis de datos con IA</a>
+          <a href="lineas-de-trabajo/realidad-aumentada.html">Realidad aumentada</a>
+          <a href="lineas-de-trabajo/proyectos-europeos.html">Proyectos europeos</a>
+        </div>
+      </li>
+      <li class="nav__item"><a href="resultados.html" class="nav__link">Resultados</a></li>
+      <li class="nav__item"><a href="infraestructura.html" class="nav__link" aria-current="page">Infraestructura</a></li>
+      <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile">
+    <a href="index.html">Inicio</a>
+    <button class="nav__accordion-toggle" aria-expanded="false">Líneas de trabajo
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav__accordion-panel">
+      <a href="lineas-de-trabajo.html">Ver todas las líneas →</a>
+      <a href="lineas-de-trabajo/anonimizacion.html">Anonimización y seudonimización</a>
+      <a href="lineas-de-trabajo/datalakes.html">Datalakes y curación del dato</a>
+      <a href="lineas-de-trabajo/analisis-ia.html">Análisis de datos con IA</a>
+      <a href="lineas-de-trabajo/realidad-aumentada.html">Realidad aumentada</a>
+      <a href="lineas-de-trabajo/proyectos-europeos.html">Proyectos europeos</a>
+    </div>
+    <a href="resultados.html">Resultados</a>
+    <a href="infraestructura.html">Infraestructura</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</nav>
+
+<header class="cover section">
+  <div class="cover__blobs" aria-hidden="true"><img src="assets/marca/icon-outline-white.png" alt="" class="cover__mark"><div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div></div>
+  <div class="wrap">
+    <p class="eyebrow reveal">INFRAESTRUCTURA</p>
+    <h1 class="reveal dot-accent" style="color:#fff;">Hardware y software propio</h1>
+    <p class="page-cover__intro reveal" style="margin-bottom:44px;">La ciencia abierta necesita músculo técnico. Esta es la infraestructura computacional que hace posible procesar imagen médica a gran escala, y el software que desarrollamos y compartimos con la comunidad.</p>
+
+    <div class="grid grid-3 stagger" style="--label-color:rgba(255,255,255,.72);">
+      <div class="reveal" style="display:flex;gap:16px;align-items:flex-start;">
+        <img src="assets/infraestructura/image17.png" alt="" class="stat__icon" style="filter:invert(1);">
+        <div><span class="stat__value" data-count-to="13">0</span><p class="stat__label" style="color:var(--label-color);">Nodos de computación</p></div>
+      </div>
+      <div class="reveal" style="display:flex;gap:16px;align-items:flex-start;">
+        <img src="assets/infraestructura/image19.png" alt="" class="stat__icon" style="filter:invert(1);">
+        <div><span class="stat__value" data-count-to="600">0</span><p class="stat__label" style="color:var(--label-color);">Unidades de procesamiento (CPUs)</p></div>
+      </div>
+      <div class="reveal" style="display:flex;gap:16px;align-items:flex-start;">
+        <img src="assets/infraestructura/image21.png" alt="" class="stat__icon" style="filter:invert(1);">
+        <div><span class="stat__value" data-count-to="11" data-count-suffix=" TB">0</span><p class="stat__label" style="color:var(--label-color);">Memoria RAM agregada</p></div>
+      </div>
+      <div class="reveal card" style="grid-column:span 1;background:linear-gradient(135deg, var(--blue-brand), var(--navy-700));display:flex;gap:16px;align-items:flex-start;box-shadow:0 16px 36px -12px rgba(61,113,225,.5);">
+        <img src="assets/infraestructura/image20.png" alt="" class="stat__icon" style="filter:invert(1);">
+        <div><span class="stat__value" data-count-to="4" style="color:#fff;">0</span><p class="stat__label" style="color:rgba(255,255,255,.85);">GPUs NVIDIA Volta V100 · 81 GB por GPU · servidor de IA dedicado</p></div>
+      </div>
+      <div class="reveal" style="display:flex;gap:16px;align-items:flex-start;">
+        <img src="assets/infraestructura/image22.png" alt="" class="stat__icon" style="filter:invert(1);">
+        <div><span class="stat__value" data-count-to="1" data-count-suffix=" PB">0</span><p class="stat__label" style="color:var(--label-color);">Almacenamiento general</p></div>
+      </div>
+      <div class="reveal" style="display:flex;gap:16px;align-items:flex-start;">
+        <img src="assets/infraestructura/image18.png" alt="" class="stat__icon" style="filter:invert(1);">
+        <div><span class="stat__value" data-count-to="180" data-count-suffix=" TB">0</span><p class="stat__label" style="color:var(--label-color);">Gestión DICOM · escalable a 800 TB</p></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow reveal">SOFTWARE PROPIO Y CÓDIGO ABIERTO</p>
+    <h2 class="reveal dot-accent">Repositorios en GitHub</h2>
+    <div class="grid grid-3 stagger" style="margin-top:32px;">
+      <a href="https://github.com/BIMCV-CSUSP/DiSMed" target="_blank" rel="noopener" class="card reveal">
+        <span class="tag">NLP · NER</span>
+        <h3>DiSMed</h3>
+        <p>Desidentificación de informes radiológicos basada en Reconocimiento de Entidades Nombradas en español.</p>
+        <span class="link-ext" style="margin-top:10px;display:inline-flex;">github.com/BIMCV-CSUSP/DiSMed ↗</span>
+      </a>
+      <div class="card reveal">
+        <span class="tag">NLP · LLM</span>
+        <h3>DiSMed-LLM</h3>
+        <p>Desidentificación de informes radiológicos mediante modelos de lenguaje extensos (LLMs).</p>
+        <span style="margin-top:10px;display:inline-flex;font-size:0.85rem;color:var(--text-secondary);">Repositorio aún no público</span>
+      </div>
+      <a href="https://github.com/BIMCV-CSUSP/Smart-Upload" target="_blank" rel="noopener" class="card reveal">
+        <span class="tag">DICOM</span>
+        <h3>Smart-Upload</h3>
+        <p>Carga de archivos DICOM en la plataforma XNAT con datos sensibles ya eliminados.</p>
+        <span class="link-ext" style="margin-top:10px;display:inline-flex;">github.com/BIMCV-CSUSP/Smart-Upload ↗</span>
+      </a>
+      <a href="https://github.com/BIMCV-CSUSP/MIDS" target="_blank" rel="noopener" class="card reveal">
+        <span class="tag">ESTANDARIZACIÓN</span>
+        <h3>MIDS / XNAT2MIDS</h3>
+        <p>Recuperación de información y conversión de formato a la estructura MIDS.</p>
+        <span class="link-ext" style="margin-top:10px;display:inline-flex;">github.com/BIMCV-CSUSP/MIDS ↗</span>
+      </a>
+      <a href="https://github.com/BIMCV-CSUSP/BIMCV-AIKit" target="_blank" rel="noopener" class="card reveal">
+        <span class="tag">TOOLKIT</span>
+        <h3>BIMCV-AIKit</h3>
+        <p>Métodos útiles para manejar imágenes médicas en Python e implementaciones de modelos de Deep Learning.</p>
+        <span class="link-ext" style="margin-top:10px;display:inline-flex;">github.com/BIMCV-CSUSP/BIMCV-AIKit ↗</span>
+      </a>
+      <a href="https://github.com/BIMCV-CSUSP/3D-MI-Reports" target="_blank" rel="noopener" class="card reveal">
+        <span class="tag">REALIDAD AUMENTADA</span>
+        <h3>3D-MI-Reports</h3>
+        <p>Visualización 3D de biomarcadores de imagen médica en web/móvil.</p>
+        <span class="link-ext" style="margin-top:10px;display:inline-flex;">github.com/BIMCV-CSUSP/3D-MI-Reports ↗</span>
+      </a>
+      <a href="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19" target="_blank" rel="noopener" class="card reveal">
+        <span class="tag">DATASET + SCRIPTS</span>
+        <h3>BIMCV-COVID-19</h3>
+        <p>Herramientas y metadatos del dataset abierto BIMCV-COVID19+.</p>
+        <span class="link-ext" style="margin-top:10px;display:inline-flex;">github.com/BIMCV-CSUSP/BIMCV-COVID-19 ↗</span>
+      </a>
+      <a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener" class="card reveal" style="grid-column:span 2;background:var(--navy-800);color:#fff;display:flex;flex-direction:column;justify-content:center;">
+        <span class="tag" style="background:rgba(255,255,255,.12);color:#fff;">CÓDIGO ABIERTO</span>
+        <h3 style="color:#fff;">BIMCV-CSUSP</h3>
+        <p style="color:var(--text-on-dark-secondary);">Organización pública con todo nuestro código abierto para la comunidad biomédica y de IA.</p>
+        <span class="btn btn-primary btn-sm" style="margin-top:14px;align-self:flex-start;">Ver todos los repositorios ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><img src="assets/marca/icon-outline-white.png" alt="" class="footer__mark">
+  <div class="wrap">
+    <div class="footer__logos"><img src="assets/marca/Convivencia 1 - UMIBIA - blanco - sin Barra.png" alt="Generalitat Valenciana · ACI·ARA · Fundació Fisabio · Imagen Biomédica e IA"></div>
+    <div class="footer__grid">
+      <div><p class="footer__tagline">Unidad Mixta de Imagen Biomédica e Inteligencia Artificial · FISABIO-CIPF</p></div>
+      <div><h4>Sitio</h4><ul>
+        <li><a href="index.html">Inicio</a></li><li><a href="lineas-de-trabajo.html">Líneas de trabajo</a></li>
+        <li><a href="resultados.html">Resultados</a></li><li><a href="infraestructura.html">Infraestructura</a></li>
+        <li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div><h4>Recursos externos</h4><ul>
+        <li><a href="https://fisabio.san.gva.es/es/apoyo-a-la-investigacion/plataformas-y-servicios-cientifico-tecnicos/servicios-cientifico-tecnologicos/fisabio-cipf/" target="_blank" rel="noopener">Web oficial FISABIO-CIPF ↗</a></li>
+        <li><a href="https://bimcv.cipf.es/" target="_blank" rel="noopener">BIMCV — Banco de Imágenes Médicas ↗</a></li>
+        <li><a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener">GitHub — BIMCV-CSUSP ↗</a></li></ul></div>
+      <div><h4>Contacto</h4><ul>
+        <li><a href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></li><li>+34 961 925 700</li>
+        <li>Avda. de Catalunya, 21 · 46020 Valencia</li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> UMIB-IA · Fundació Fisabio</span>
+      <span><a href="https://fisabio.san.gva.es/es/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a><a href="https://fisabio.san.gva.es/es/fisabio/fisabio-abierta-portal-de-transparencia/proteccion-de-datos-y-privacidad/ejercicio-de-derechos/" target="_blank" rel="noopener">Política de privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

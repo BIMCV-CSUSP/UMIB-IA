@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Análisis de datos con IA · UMIB-IA</title>
+<meta name="description" content="Segmentación, clasificación, radiómica, aprendizaje federado y señales EEG: cómo UMIB-IA aplica la inteligencia artificial a la imagen médica.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/marca/UMIBIA - color.png">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav__logo"><img src="../assets/marca/UMIBIA - color.png" alt="UMIB-IA — Imagen Biomédica e IA"></a>
+    <ul class="nav__links">
+      <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+      <li class="nav__item">
+        <a href="../lineas-de-trabajo.html" class="nav__link">Líneas de trabajo
+          <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <div class="nav__submenu">
+          <a href="anonimizacion.html">Anonimización y seudonimización</a>
+          <a href="datalakes.html">Datalakes y curación del dato</a>
+          <a href="analisis-ia.html" aria-current="page">Análisis de datos con IA</a>
+          <a href="realidad-aumentada.html">Realidad aumentada</a>
+          <a href="proyectos-europeos.html">Proyectos europeos</a>
+        </div>
+      </li>
+      <li class="nav__item"><a href="../resultados.html" class="nav__link">Resultados</a></li>
+      <li class="nav__item"><a href="../infraestructura.html" class="nav__link">Infraestructura</a></li>
+      <li class="nav__item"><a href="../contacto.html" class="nav__link">Contacto</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile">
+    <a href="../index.html">Inicio</a>
+    <button class="nav__accordion-toggle" aria-expanded="false">Líneas de trabajo
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav__accordion-panel">
+      <a href="../lineas-de-trabajo.html">Ver todas las líneas →</a>
+      <a href="anonimizacion.html">Anonimización y seudonimización</a>
+      <a href="datalakes.html">Datalakes y curación del dato</a>
+      <a href="analisis-ia.html">Análisis de datos con IA</a>
+      <a href="realidad-aumentada.html">Realidad aumentada</a>
+      <a href="proyectos-europeos.html">Proyectos europeos</a>
+    </div>
+    <a href="../resultados.html">Resultados</a>
+    <a href="../infraestructura.html">Infraestructura</a>
+    <a href="../contacto.html">Contacto</a>
+  </div>
+</nav>
+
+<header class="cover page-cover">
+  <div class="cover__blobs" aria-hidden="true"><img src="../assets/marca/icon-outline-white.png" alt="" class="cover__mark"><div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div></div>
+  <div class="wrap">
+    <p class="page-cover__breadcrumb reveal"><a href="../index.html">Inicio</a> / <a href="../lineas-de-trabajo.html">Líneas de trabajo</a> / Análisis de datos con IA</p>
+    <p class="eyebrow reveal">ANÁLISIS CON IA</p>
+    <h1 class="reveal dot-accent">Análisis de datos con inteligencia artificial</h1>
+    <p class="page-cover__intro reveal">Segmentación, clasificación, generación de informes, radiómica, aprendizaje federado y casos clínicos reales: así aplicamos la inteligencia artificial a la imagen médica.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="subnav reveal" aria-label="Secciones de esta línea de trabajo">
+    <a href="#segmentacion">Segmentación</a>
+    <a href="#clasificacion">Clasificación</a>
+    <a href="#radiomica">Radiómica</a>
+    <a href="#federado">Aprendizaje federado</a>
+    <a href="#eeg">Señales EEG</a>
+  </nav>
+</div>
+
+<!-- 5.3.1 Segmentación -->
+<section id="segmentacion" class="subsection">
+<div class="wrap">
+  <p class="eyebrow reveal">01 · SEGMENTACIÓN DE IMAGEN MÉDICA</p>
+  <h2 class="reveal dot-accent" style="font-size:1.6rem;">Delimitar estructuras y lesiones con Deep Learning</h2>
+  <div class="grid grid-2 stagger" style="margin-top:24px;">
+
+    <div class="card project-card reveal">
+      <span class="tag">TC ABDOMINO-PÉLVICA</span>
+      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/image58.gif" alt="Animación de segmentación multiorgánica abdomino-pélvica en 3D a partir de TC: columna, pelvis, riñones, bazo e hígado"></div>
+      <h3>Segmentación multiorgánica abdomino-pélvica</h3>
+      <p>Segmentación 3D de múltiples estructuras (columna, pelvis, riñones, bazo, hígado) a partir de TC, con revisión conjunta del render volumétrico y los cortes axial, coronal y sagital.</p>
+    </div>
+    <div class="card project-card reveal">
+      <span class="tag">COLUMNA VERTEBRAL</span>
+      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/columna.gif" alt="Animación de reconstrucción 3D de la columna lumbar segmentada: vértebras, discos intervertebrales y raíces nerviosas"></div>
+      <h3>Segmentación de columna vertebral</h3>
+      <p>Delimitación automática de vértebras, discos intervertebrales, canal medular y tejidos blandos adyacentes sobre MRI sagital lumbar.</p>
+    </div>
+    <div class="card project-card reveal" style="grid-column:1/-1;">
+      <span class="tag">CÁNCER DE PRÓSTATA</span>
+      <div class="grid grid-2" style="gap:12px;">
+        <div>
+          <div class="media-frame contain" style="margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image51.png" alt="Comparación de segmentación de próstata por PI-RADS entre Ground Truth, SAM-UNETR, SwinUNETR, UNETR y UNET"></div>
+          <p class="mask-photo-compare__caption">Comparativa 2D (PI-RADS)</p>
+        </div>
+        <div>
+          <div class="media-frame contain" style="margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image57.gif" alt="Animación de segmentación 3D de las zonas de la próstata, con render volumétrico y cortes axiales correspondientes"></div>
+          <p class="mask-photo-compare__caption">Reconstrucción 3D</p>
+        </div>
+      </div>
+      <h3 style="margin-top:14px;">Segmentación de próstata (PI-RADS)</h3>
+      <p>Comparativa de modelos de segmentación sobre MRI multiparamétrica (PI-RADS 2 a 5) y reconstrucción volumétrica 3D de las zonas prostáticas a partir de la segmentación por cortes.</p>
+      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1109/ACCESS.2023.3326882" target="_blank" rel="noopener">IEEE Access (2023) ↗</a></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 5.3.2 Clasificación -->
+<section id="clasificacion" class="subsection" style="background:var(--card);">
+<div class="wrap">
+  <p class="eyebrow reveal">02 · CLASIFICACIÓN E INTERPRETABILIDAD DE MODELOS</p>
+  <h2 class="reveal dot-accent" style="font-size:1.6rem;">De la imagen al hallazgo clínico</h2>
+  <div class="grid grid-3 stagger" style="margin-top:24px;">
+    <div class="card project-card reveal">
+      <span class="tag">REPORTES AUTOMÁTICOS</span>
+      <div class="media-frame"><div class="placeholder-shot">Mapa de calor + probabilidades de hallazgos<br>[Imagen pendiente: captura real del modelo]</div></div>
+      <h3>Generación automática de reportes</h3>
+      <p>Clasificación de hallazgos radiológicos (cardiomegalia, atelectasia, consolidación, nódulo, derrame pleural…) sobre radiografía de tórax, con probabilidad por hallazgo.</p>
+    </div>
+    <div class="card project-card reveal">
+      <span class="tag">ALZHEIMER · MRI</span>
+      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/image63.png" alt="Mosaico de cortes sagitales de MRI cerebral con mapas de activación, comparando distintos niveles de severidad de Alzheimer"></div>
+      <h3>Niveles de severidad de Alzheimer</h3>
+      <p>Clasificación de MRI cerebral en <em>Early Mild Cognitive Impairment</em>, <em>Mild Cognitive Impairment</em> y <em>Alzheimer's Disease</em>.</p>
+    </div>
+    <div class="card project-card reveal">
+      <span class="tag">PRÓSTATA · EXPLICABILIDAD</span>
+      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/image65.jpeg" alt="Grid de secuencias MRI de próstata (T2w, ADC, DWI) con guided backpropagation superpuesto sobre el área clínicamente significativa"></div>
+      <h3>Cáncer de próstata clínicamente significativo</h3>
+      <p>Clasificación combinando secuencias T2w, ADC map y DWI, con <em>guided backpropagation</em> para explicabilidad del modelo.</p>
+      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1038/s41598-026-42214-7" target="_blank" rel="noopener">Scientific Reports (2026) ↗</a></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 5.3.3 Radiómica -->
+<section id="radiomica" class="subsection">
+<div class="wrap">
+  <p class="eyebrow reveal">03 · RADIÓMICA</p>
+  <h2 class="reveal dot-accent" style="font-size:1.6rem;">De la imagen a miles de características cuantitativas</h2>
+  <p class="reveal max-w-prose">Extracción de una gran cantidad de características de las imágenes médicas mediante algoritmos de caracterización de datos, para alimentar modelos predictivos.</p>
+  <div class="reveal media-frame contain" style="max-width:760px;margin:20px 0 36px;">
+    <img src="../assets/linea-3-analisis-ia/flujo radiomica.png" alt="Flujo de trabajo de radiómica: datos de entrada, extracción de características radiómicas (forma, primer orden, segundo orden), 1080 características por ROI, selección de características, entrenamiento y validación de modelos predictivos">
+  </div>
+
+  <div class="grid grid-2 stagger">
+    <div class="card project-card reveal" style="grid-column:1/-1;">
+      <span class="tag">COLUMNA LUMBAR</span>
+      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/clasificación pfirrmann.png" alt="Pipeline de clasificación de la degeneración de discos lumbares: adquisición y segmentación, extracción y selección de características radiómicas, y análisis de resultados con curvas ROC y diagramas de caja"></div>
+      <h3>Clasificación de la degeneración de discos lumbares</h3>
+      <p>Pipeline completo: adquisición y segmentación de la columna lumbar → extracción y selección de características radiómicas → análisis de resultados con curvas ROC.</p>
+      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1016/j.artmed.2023.102559" target="_blank" rel="noopener">Artificial Intelligence in Medicine (2023) ↗</a></div>
+    </div>
+
+    <div class="card reveal" style="grid-column:1/-1;">
+      <span class="tag">ESQUIZOFRENIA</span>
+      <h3>Primeras alucinaciones vs. controles</h3>
+      <p>Cohorte de 187 sujetos control y 134 con primeras alucinaciones (sin diagnóstico de esquizofrenia). Segmentación cerebral con FreeSurfer (Aparc+ASeg), extracción de características con Pyradiomics, y clasificación con SVM, Regresión Logística y Random Forest — AUC hasta 0,939.</p>
+      <div class="split" style="margin-top:20px;align-items:flex-start;">
+        <div class="chart-card viz-root" data-chart="roc" data-series='[{"name":"SVM","auc":0.939},{"name":"Regresión Logística","auc":0.902},{"name":"Random Forest","auc":0.861}]'>
+          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:10px;">Curvas ROC (recreación ilustrativa del AUC publicado)</p>
+        </div>
+        <div class="chart-card viz-root" data-chart="shap" data-items='[{"label":"Volumen hipocampo","value":0.31},{"label":"Espesor corteza frontal","value":0.24},{"label":"Volumen amígdala","value":0.19},{"label":"Textura tálamo","value":0.14},{"label":"Volumen ventrículos","value":0.09}]'>
+          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">Importancia de variables (SHAP, ilustrativo)</p>
+        </div>
+      </div>
+      <div class="media-frame contain reveal" style="max-width:760px;margin-top:24px;">
+        <img src="../assets/linea-3-analisis-ia/image67.png" alt="Pipeline de radiómica en 4 etapas: preprocesamiento y segmentación automática, extracción de características radiómicas, modelado con selección de características, e interpretación del modelo con SHAP">
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- 5.3.4 Aprendizaje federado -->
+<section id="federado" class="subsection" style="background:var(--card);">
+<div class="wrap">
+  <p class="eyebrow reveal">04 · APRENDIZAJE FEDERADO</p>
+  <h2 class="reveal dot-accent" style="font-size:1.6rem;">Entrenar sin mover el dato</h2>
+  <p class="reveal max-w-prose">Enfoque descentralizado para entrenar modelos de aprendizaje automático: los datos permanecen en los dispositivos/nodos locales y solo se comparten las actualizaciones del modelo, garantizando privacidad y seguridad.</p>
+
+  <div class="grid grid-2 stagger" style="margin-top:24px;">
+    <div class="card project-card reveal">
+      <span class="tag">RED FEDERADA · CV</span>
+      <div class="media-frame contain media-frame--logo"><img src="../assets/linea-3-analisis-ia/image83.svg" alt="Logotipo de la red federada TARTAGLIA"></div>
+      <h3>TARTAGLIA</h3>
+      <p>Red federada para acelerar la aplicación de la IA en el Sistema Sanitario Español. Reconocimiento de entidades en informes (NER) aplicado a la extracción de hallazgos PI-RADS/BI-RADS desde informes de radiología en varios hospitales de la Comunitat Valenciana.</p>
+      <div class="project-card__links"><a class="link-ext" href="https://www.tartaglia.es/" target="_blank" rel="noopener">tartaglia.es ↗</a></div>
+    </div>
+    <div class="card project-card reveal">
+      <span class="tag">ESPACIO DE DATOS FEDERADO</span>
+      <div class="media-frame contain media-frame--logo"><img src="../assets/linea-3-analisis-ia/pharmatrace-red.svg" alt="Logotipo del espacio de datos federado GVA PharmaTrace Hub"></div>
+      <h3>GVA PharmaTrace Hub</h3>
+      <p>Infraestructura que integra y gestiona datos de salud de múltiples fuentes (Fundación Hospital Provincial de Castellón, ISABIAL, IIS La Fe, OmicSpace…) coordinada por la Generalitat Valenciana.</p>
+      <div class="project-card__links"><a class="link-ext" href="https://gvapharmatracehub.fisabio.san.gva.es/Inicio.dc.html" target="_blank" rel="noopener">gvapharmatracehub.fisabio.san.gva.es ↗</a></div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2 class="dot-accent">De la investigación a la práctica clínica</h2>
+      <p style="color:var(--text-on-dark-secondary);max-width:52ch;margin:0 auto 8px;">Visualizamos estos modelos y datos en 3D, en web y con dispositivos de realidad aumentada.</p>
+      <div class="cta-band__actions"><a href="realidad-aumentada.html" class="btn btn-primary">Realidad aumentada →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><img src="../assets/marca/icon-outline-white.png" alt="" class="footer__mark">
+  <div class="wrap">
+    <div class="footer__logos"><img src="../assets/marca/Convivencia 1 - UMIBIA - blanco - sin Barra.png" alt="Generalitat Valenciana · ACI·ARA · Fundació Fisabio · Imagen Biomédica e IA"></div>
+    <div class="footer__grid">
+      <div><p class="footer__tagline">Unidad Mixta de Imagen Biomédica e Inteligencia Artificial · FISABIO-CIPF</p></div>
+      <div><h4>Sitio</h4><ul>
+        <li><a href="../index.html">Inicio</a></li><li><a href="../lineas-de-trabajo.html">Líneas de trabajo</a></li>
+        <li><a href="../resultados.html">Resultados</a></li><li><a href="../infraestructura.html">Infraestructura</a></li>
+        <li><a href="../contacto.html">Contacto</a></li></ul></div>
+      <div><h4>Recursos externos</h4><ul>
+        <li><a href="https://fisabio.san.gva.es/es/apoyo-a-la-investigacion/plataformas-y-servicios-cientifico-tecnicos/servicios-cientifico-tecnologicos/fisabio-cipf/" target="_blank" rel="noopener">Web oficial FISABIO-CIPF ↗</a></li>
+        <li><a href="https://bimcv.cipf.es/" target="_blank" rel="noopener">BIMCV — Banco de Imágenes Médicas ↗</a></li>
+        <li><a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener">GitHub — BIMCV-CSUSP ↗</a></li></ul></div>
+      <div><h4>Contacto</h4><ul>
+        <li><a href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></li><li>+34 961 925 700</li>
+        <li>Avda. de Catalunya, 21 · 46020 Valencia</li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> UMIB-IA · Fundació Fisabio</span>
+      <span><a href="https://fisabio.san.gva.es/es/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a><a href="https://fisabio.san.gva.es/es/fisabio/fisabio-abierta-portal-de-transparencia/proteccion-de-datos-y-privacidad/ejercicio-de-derechos/" target="_blank" rel="noopener">Política de privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/charts.js"></script>
+</body>
+</html>

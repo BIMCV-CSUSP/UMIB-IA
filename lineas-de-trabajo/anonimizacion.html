@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Anonimización y seudonimización · UMIB-IA</title>
+<meta name="description" content="Anonimización y seudonimización de imagen médica, metadatos e informes clínicos conforme a DICOM y RGPD: CTP, DiSMed, DiSMed-LLM, Defacer y Smart-Upload.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/marca/UMIBIA - color.png">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav__logo"><img src="../assets/marca/UMIBIA - color.png" alt="UMIB-IA — Imagen Biomédica e IA"></a>
+    <ul class="nav__links">
+      <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
+      <li class="nav__item">
+        <a href="../lineas-de-trabajo.html" class="nav__link">Líneas de trabajo
+          <svg class="chev" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </a>
+        <div class="nav__submenu">
+          <a href="anonimizacion.html" aria-current="page">Anonimización y seudonimización</a>
+          <a href="datalakes.html">Datalakes y curación del dato</a>
+          <a href="analisis-ia.html">Análisis de datos con IA</a>
+          <a href="realidad-aumentada.html">Realidad aumentada</a>
+          <a href="proyectos-europeos.html">Proyectos europeos</a>
+        </div>
+      </li>
+      <li class="nav__item"><a href="../resultados.html" class="nav__link">Resultados</a></li>
+      <li class="nav__item"><a href="../infraestructura.html" class="nav__link">Infraestructura</a></li>
+      <li class="nav__item"><a href="../contacto.html" class="nav__link">Contacto</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile">
+    <a href="../index.html">Inicio</a>
+    <button class="nav__accordion-toggle" aria-expanded="false">Líneas de trabajo
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav__accordion-panel">
+      <a href="../lineas-de-trabajo.html">Ver todas las líneas →</a>
+      <a href="anonimizacion.html">Anonimización y seudonimización</a>
+      <a href="datalakes.html">Datalakes y curación del dato</a>
+      <a href="analisis-ia.html">Análisis de datos con IA</a>
+      <a href="realidad-aumentada.html">Realidad aumentada</a>
+      <a href="proyectos-europeos.html">Proyectos europeos</a>
+    </div>
+    <a href="../resultados.html">Resultados</a>
+    <a href="../infraestructura.html">Infraestructura</a>
+    <a href="../contacto.html">Contacto</a>
+  </div>
+</nav>
+
+<header class="cover page-cover">
+  <div class="cover__blobs" aria-hidden="true"><img src="../assets/marca/icon-outline-white.png" alt="" class="cover__mark"><div class="blob blob--1"></div><div class="blob blob--2"></div></div>
+  <div class="wrap">
+    <p class="page-cover__breadcrumb reveal"><a href="../index.html">Inicio</a> / <a href="../lineas-de-trabajo.html">Líneas de trabajo</a> / Anonimización</p>
+    <p class="eyebrow reveal">ANONIMIZACIÓN</p>
+    <h1 class="reveal dot-accent">Anonimización y seudonimización</h1>
+    <p class="page-cover__intro reveal">Todas las imágenes médicas que procesamos cumplen el estándar DICOM. Aplicamos una regulación común para anonimizar/seudonimizar la imagen, los metadatos y los informes clínicos, utilizando la red ARTERIAS en BIMCV.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow reveal">PROYECTOS Y HERRAMIENTAS</p>
+    <h2 class="reveal dot-accent" style="margin-bottom:36px;">Cómo protegemos el dato</h2>
+
+    <div class="grid grid-2 stagger">
+      <div class="card project-card reveal" style="grid-column:1/-1;">
+        <span class="tag">METADATOS</span>
+        <div class="split" style="align-items:center;">
+          <div class="media-frame">
+            <img src="../assets/linea-1-anonimizacion/image30.png" alt="Radiografía de tórax con metadatos DICOM visibles (nombre, sexo, fecha de nacimiento, número de historia clínica) pendientes de anonimizar">
+          </div>
+          <div>
+            <h3>Clinical Trial Processor (CTP)</h3>
+            <p>Software libre de RSNA que cumple los requisitos del estándar DICOM para anonimizar metadatos. Admite instalación con un solo clic y múltiples etapas de procesamiento configurables: importación HTTP/DICOM, reglas de anonimización y exportación HTTP(s)/DICOM/FTP(s).</p>
+            <div class="flow" style="margin-top:18px;padding:16px 18px;">
+              <div class="flow__step" style="font-size:0.78rem;padding:9px 13px;">DICOM con metadatos</div>
+              <span class="flow__arrow">→</span>
+              <div class="flow__step" style="font-size:0.78rem;padding:9px 13px;">CTP</div>
+              <span class="flow__arrow">→</span>
+              <div class="flow__step" style="font-size:0.78rem;padding:9px 13px;">DICOM anonimizado</div>
+            </div>
+            <div class="project-card__links" style="margin-top:14px;">
+              <a class="link-ext" href="https://bimcv.cipf.es/resources/ctp/" target="_blank" rel="noopener">Documentación de CTP en BIMCV ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card project-card reveal" style="grid-column:1/-1;">
+        <span class="tag">DICOM · CARGA</span>
+        <h3>Smart-Upload</h3>
+        <p>Herramienta que orquesta la carga de archivos DICOM en XNAT: busca las imágenes en el directorio de origen, las limpia y descomprime, las envía a CTP para su anonimización y, una vez seguras, las sube a BIMCV a través de la red ARTERIAS Net. Soporta carga individual, por lotes, por departamento o de varios proyectos a la vez.</p>
+
+        <div class="arch-flow chart-card" style="padding:24px 8px 8px;" data-chart="arch-flow"
+             data-nodes='[{"label":"PACS","sub":"Selección de estudios","icon":"pacs"},{"label":"Smart-Upload","sub":"Limpieza y descompresión","icon":"upload"},{"label":"CTP","sub":"Anonimización DICOM","icon":"shield"},{"label":"XNAT","sub":"BIMCV · por proyecto","icon":"database"}]'
+             data-branch='{"from":2,"label":"Cuarentena","sub":"si falla la anonimización"}'
+             data-group='{"from":0,"to":2,"label":"ARTERIAS Net","includeBranch":true}'></div>
+
+        <div class="grid grid-4" style="margin-top:8px;">
+          <div>
+            <p class="tag" style="margin-bottom:8px;">01 · PACS</p>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Un administrador de datos selecciona los estudios a cargar desde la estación PACS.</p>
+          </div>
+          <div>
+            <p class="tag" style="margin-bottom:8px;">02 · SMART-UPLOAD</p>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Script en bash que busca las imágenes DICOM, las limpia y las descomprime antes de enviarlas a CTP.</p>
+          </div>
+          <div>
+            <p class="tag" style="margin-bottom:8px;">03 · CTP</p>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Anonimiza los metadatos según reglas configurables; si la desidentificación falla, el estudio se pone en cuarentena y no se sube. Todo esto ocurre dentro de la red segura ARTERIAS Net.</p>
+          </div>
+          <div>
+            <p class="tag" style="margin-bottom:8px;">04 · XNAT</p>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Ya fuera de ARTERIAS Net, los datos anonimizados llegan a BIMCV y quedan organizados por proyecto.</p>
+          </div>
+        </div>
+
+        <div class="project-card__links" style="margin-top:18px;">
+          <a class="link-ext" href="https://bimcv.cipf.es/resources/ctp/" target="_blank" rel="noopener">Documentación de CTP en BIMCV ↗</a>
+          <a class="link-ext" href="https://github.com/BIMCV-CSUSP/Smart-Upload" target="_blank" rel="noopener">Smart-Upload en GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="card project-card reveal" style="grid-column:1/-1;">
+        <span class="tag">INFORME · NLP</span>
+        <h3>DiSMed y DiSMed-LLM — NER para informes radiológicos</h3>
+        <p>DiSMed identifica información personal en informes radiológicos en español mediante Reconocimiento de Entidades Nombradas (NER, con spaCy y redes NER sobre TensorFlow) y las sustituye por valores sintéticos generados dentro de la misma categoría — nombres, fechas, identificadores — de forma que el reemplazo resulta prácticamente indistinguible del dato real. Requiere poca cantidad de datos de entrenamiento, lo que facilita adaptarlo a otros tipos de texto clínico e incluso a otros idiomas. <strong>DiSMed-LLM</strong> es su evolución: aprovecha modelos de lenguaje extensos (Llama, Gemma) para una desidentificación aún más avanzada del texto médico en español.</p>
+
+        <div class="pill-list">
+          <span>NAME</span><span>DATE</span><span>NUM</span>
+        </div>
+
+        <div class="grid grid-2" style="margin-top:18px;">
+          <div>
+            <div class="media-frame contain">
+              <img src="../assets/linea-1-anonimizacion/image26.jpeg" alt="Pipeline de DiSMed en 4 pasos: creación del corpus, sustitución de entidades por valores aleatorizados, generación de corpus sintético, entrenamiento y selección del modelo NER">
+            </div>
+            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">DiSMed</p>
+          </div>
+          <div>
+            <div class="media-frame contain">
+              <img src="../assets/linea-1-anonimizacion/image28.jpeg" alt="Pipeline de DiSMed-LLM: Prompt Engineering few-shot, tagging con LLMs (Gemma, Llama) y anonimización NER">
+            </div>
+            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">DiSMed-LLM</p>
+          </div>
+        </div>
+
+        <div style="margin-top:26px;">
+          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">DiSMed-LLM — modelos evaluados (prompt engineering few-shot)</p>
+          <div class="grid grid-4" style="gap:14px;">
+            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
+              <span class="tag" style="margin-bottom:8px;">LLAMA</span>
+              <p style="font-weight:800;font-size:0.95rem;margin:0;">3.1</p>
+              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">8B parámetros</p>
+            </div>
+            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
+              <span class="tag" style="margin-bottom:8px;">LLAMA</span>
+              <p style="font-weight:800;font-size:0.95rem;margin:0;">3.2</p>
+              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">3B parámetros</p>
+            </div>
+            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
+              <span class="tag" style="margin-bottom:8px;">GEMMA-2</span>
+              <p style="font-weight:800;font-size:0.95rem;margin:0;">9B</p>
+              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">parámetros</p>
+            </div>
+            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
+              <span class="tag" style="margin-bottom:8px;">GEMMA-2</span>
+              <p style="font-weight:800;font-size:0.95rem;margin:0;">2B</p>
+              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">parámetros</p>
+            </div>
+          </div>
+          <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:14px;">Evaluados por <em>few-shot learning</em> sobre dos bancos de pruebas — <strong>DiSMed</strong> y el challenge <strong>MEDDOCAN</strong> — con métricas propias de solapamiento (<em>overlap-based</em>) y similitud (<em>similarity-based</em>), pensadas para superar las limitaciones de las métricas de coincidencia exacta.</p>
+        </div>
+
+        <div class="chart-card" style="padding:22px 4px 4px;">
+          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">Recall en la identificación de entidades</p>
+          <div data-chart="bars" data-items='[
+            {"label":"Informes radiológicos (BIMCV)","value":96.55,"suffix":"%","note":"Conjunto de entrenamiento propio de DiSMed."},
+            {"label":"MEDDOCAN — validación externa","value":69.86,"suffix":"%","note":"Historiales clínicos, comparando las tres mejores arquitecturas del challenge MEDDOCAN."}
+          ]'></div>
+        </div>
+
+        <div class="project-card__links" style="margin-top:18px;">
+          <a class="link-ext" href="https://doi.org/10.1186/s13326-021-00236-2" target="_blank" rel="noopener">DiSMed — Pérez-Díez, I. et al., J. Biomedical Semantics (2021) ↗</a>
+          <a class="link-ext" href="https://bimcv.cipf.es/bimcv-projects/dismed/" target="_blank" rel="noopener">Ficha del proyecto en BIMCV ↗</a>
+          <a class="link-ext" href="https://github.com/BIMCV-CSUSP/DiSMed" target="_blank" rel="noopener">DiSMed en GitHub ↗</a>
+          <a class="link-ext" href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.173750175.54269764/v1" target="_blank" rel="noopener">DiSMed-LLM — Alzate-Grisales, J.A. et al., preprint TechRxiv (2025) ↗</a>
+          <span class="link-ext" style="color:var(--text-secondary);">Repositorio de DiSMed-LLM aún no público</span>
+        </div>
+      </div>
+
+      <div class="card project-card reveal" style="grid-column:1/-1;">
+        <span class="tag">IMAGEN · 2D Y 3D</span>
+        <h3>Defacer — anonimización de imagen 2D y 3D</h3>
+        <p><strong>2D — Máscaras personalizadas:</strong> eliminación de anotaciones en texto sobre radiografías. <strong>3D — Eliminación facial:</strong> eliminación de información facial en resonancias cerebrales mediante Deep Learning.</p>
+        <div class="grid grid-2" style="margin-top:18px;">
+          <div>
+            <div class="mask-photo-compare">
+              <div>
+                <div class="media-frame" style="aspect-ratio:8/7;">
+                  <img src="../assets/linea-1-anonimizacion/image30.png" alt="Radiografía de tórax con metadatos DICOM visibles: nombre, sexo, fecha de nacimiento y número de historia clínica">
+                </div>
+                <p class="mask-photo-compare__caption">Antes</p>
+              </div>
+              <div class="mask-photo-compare__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Máscara</span>
+              </div>
+              <div>
+                <div class="media-frame" style="aspect-ratio:8/7;">
+                  <img src="../assets/linea-1-anonimizacion/image32.png" alt="La misma radiografía tras aplicar la máscara personalizada: metadatos ya eliminados">
+                </div>
+                <p class="mask-photo-compare__caption">Después</p>
+              </div>
+            </div>
+            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">Defacer 2D — antes / después de la máscara personalizada</p>
+          </div>
+          <div>
+            <div class="media-frame contain" style="background:#000;">
+              <img src="../assets/linea-1-anonimizacion/image33.jpeg" alt="Comparación 3D: Raw MRI Data frente a Defaced MRI result, con eliminación de los rasgos faciales tras el defacing">
+            </div>
+            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">Defacer 3D — Raw MRI vs Defaced MRI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2 class="dot-accent">Sigue explorando el ciclo del dato</h2>
+      <p style="color:var(--text-on-dark-secondary);max-width:52ch;margin:0 auto 8px;">Una vez anonimizado, el dato se organiza y estandariza en nuestros datalakes.</p>
+      <div class="cta-band__actions">
+        <a href="datalakes.html" class="btn btn-primary">Datalakes y curación del dato →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><img src="../assets/marca/icon-outline-white.png" alt="" class="footer__mark">
+  <div class="wrap">
+    <div class="footer__logos"><img src="../assets/marca/Convivencia 1 - UMIBIA - blanco - sin Barra.png" alt="Generalitat Valenciana · ACI·ARA · Fundació Fisabio · Imagen Biomédica e IA"></div>
+    <div class="footer__grid">
+      <div><p class="footer__tagline">Unidad Mixta de Imagen Biomédica e Inteligencia Artificial · FISABIO-CIPF</p></div>
+      <div><h4>Sitio</h4><ul>
+        <li><a href="../index.html">Inicio</a></li><li><a href="../lineas-de-trabajo.html">Líneas de trabajo</a></li>
+        <li><a href="../resultados.html">Resultados</a></li><li><a href="../infraestructura.html">Infraestructura</a></li>
+        <li><a href="../contacto.html">Contacto</a></li></ul></div>
+      <div><h4>Recursos externos</h4><ul>
+        <li><a href="https://fisabio.san.gva.es/es/apoyo-a-la-investigacion/plataformas-y-servicios-cientifico-tecnicos/servicios-cientifico-tecnologicos/fisabio-cipf/" target="_blank" rel="noopener">Web oficial FISABIO-CIPF ↗</a></li>
+        <li><a href="https://bimcv.cipf.es/" target="_blank" rel="noopener">BIMCV — Banco de Imágenes Médicas ↗</a></li>
+        <li><a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener">GitHub — BIMCV-CSUSP ↗</a></li></ul></div>
+      <div><h4>Contacto</h4><ul>
+        <li><a href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></li><li>+34 961 925 700</li>
+        <li>Avda. de Catalunya, 21 · 46020 Valencia</li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> UMIB-IA · Fundació Fisabio</span>
+      <span><a href="https://fisabio.san.gva.es/es/aviso-legal/" target="_blank" rel="noopener">Aviso legal</a><a href="https://fisabio.san.gva.es/es/fisabio/fisabio-abierta-portal-de-transparencia/proteccion-de-datos-y-privacidad/ejercicio-de-derechos/" target="_blank" rel="noopener">Política de privacidad</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/charts.js"></script>
+</body>
+</html>
