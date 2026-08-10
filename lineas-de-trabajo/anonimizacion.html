@@ -56,7 +56,6 @@
   <div class="cover__blobs" aria-hidden="true"><img src="../assets/marca/icon-outline-white.png" alt="" class="cover__mark"><div class="blob blob--1"></div><div class="blob blob--2"></div></div>
   <div class="wrap">
     <p class="page-cover__breadcrumb reveal"><a href="../index.html">Inicio</a> / <a href="../lineas-de-trabajo.html">Líneas de trabajo</a> / Anonimización</p>
-    <p class="eyebrow reveal">ANONIMIZACIÓN</p>
     <h1 class="reveal dot-accent">Anonimización y seudonimización</h1>
     <p class="page-cover__intro reveal">Todas las imágenes médicas que procesamos cumplen el estándar DICOM. Aplicamos una regulación común para anonimizar/seudonimizar la imagen, los metadatos y los informes clínicos, utilizando la red ARTERIAS en BIMCV.</p>
   </div>
@@ -115,7 +114,10 @@
             <p style="font-size:0.85rem;color:var(--text-secondary);">Anonimiza los metadatos según reglas configurables; si la desidentificación falla, el estudio se pone en cuarentena y no se sube. Todo esto ocurre dentro de la red segura ARTERIAS Net.</p>
           </div>
           <div>
-            <p class="tag" style="margin-bottom:8px;">04 · XNAT</p>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <p class="tag" style="margin:0;">04 · XNAT</p>
+              <img src="../assets/linea-1-anonimizacion/xnat-logo.png" alt="XNAT" style="height:28px;width:auto;">
+            </div>
             <p style="font-size:0.85rem;color:var(--text-secondary);">Ya fuera de ARTERIAS Net, los datos anonimizados llegan a BIMCV y quedan organizados por proyecto.</p>
           </div>
         </div>
@@ -129,64 +131,43 @@
       <div class="card project-card reveal" style="grid-column:1/-1;">
         <span class="tag">INFORME · NLP</span>
         <h3>DiSMed y DiSMed-LLM — NER para informes radiológicos</h3>
-        <p>DiSMed identifica información personal en informes radiológicos en español mediante Reconocimiento de Entidades Nombradas (NER, con spaCy y redes NER sobre TensorFlow) y las sustituye por valores sintéticos generados dentro de la misma categoría — nombres, fechas, identificadores — de forma que el reemplazo resulta prácticamente indistinguible del dato real. Requiere poca cantidad de datos de entrenamiento, lo que facilita adaptarlo a otros tipos de texto clínico e incluso a otros idiomas. <strong>DiSMed-LLM</strong> es su evolución: aprovecha modelos de lenguaje extensos (Llama, Gemma) para una desidentificación aún más avanzada del texto médico en español.</p>
-
-        <div class="pill-list">
-          <span>NAME</span><span>DATE</span><span>NUM</span>
-        </div>
+        <p>Dos generaciones de la misma idea: anonimizar informes radiológicos en español mediante Reconocimiento de Entidades Nombradas (NER) y sustituir lo sensible por datos sintéticos indistinguibles de los reales. <strong>DiSMed</strong> (Pérez-Díez et al., 2021) entrena y compara 4 arquitecturas NER sobre un corpus propio de BIMCV. <strong>DiSMed-LLM</strong> (Alzate-Grisales et al., 2025) prescinde del entrenamiento y evalúa 4 LLMs generalistas (Gemma-2, Llama 3) mediante <em>prompt engineering</em> few-shot, sobre los mismos bancos de pruebas.</p>
 
         <div class="grid grid-2" style="margin-top:18px;">
           <div>
             <div class="media-frame contain">
               <img src="../assets/linea-1-anonimizacion/image26.jpeg" alt="Pipeline de DiSMed en 4 pasos: creación del corpus, sustitución de entidades por valores aleatorizados, generación de corpus sintético, entrenamiento y selección del modelo NER">
             </div>
-            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">DiSMed</p>
+            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">DiSMed (2021)</p>
           </div>
           <div>
             <div class="media-frame contain">
               <img src="../assets/linea-1-anonimizacion/image28.jpeg" alt="Pipeline de DiSMed-LLM: Prompt Engineering few-shot, tagging con LLMs (Gemma, Llama) y anonimización NER">
             </div>
-            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">DiSMed-LLM</p>
+            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">DiSMed-LLM (2025)</p>
           </div>
         </div>
 
-        <div style="margin-top:26px;">
-          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">DiSMed-LLM — modelos evaluados (prompt engineering few-shot)</p>
-          <div class="grid grid-4" style="gap:14px;">
-            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
-              <span class="tag" style="margin-bottom:8px;">LLAMA</span>
-              <p style="font-weight:800;font-size:0.95rem;margin:0;">3.1</p>
-              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">8B parámetros</p>
-            </div>
-            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
-              <span class="tag" style="margin-bottom:8px;">LLAMA</span>
-              <p style="font-weight:800;font-size:0.95rem;margin:0;">3.2</p>
-              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">3B parámetros</p>
-            </div>
-            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
-              <span class="tag" style="margin-bottom:8px;">GEMMA-2</span>
-              <p style="font-weight:800;font-size:0.95rem;margin:0;">9B</p>
-              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">parámetros</p>
-            </div>
-            <div class="card" style="text-align:center;padding:18px 8px;box-shadow:none;border:1px solid var(--border);">
-              <span class="tag" style="margin-bottom:8px;">GEMMA-2</span>
-              <p style="font-weight:800;font-size:0.95rem;margin:0;">2B</p>
-              <p style="font-size:0.78rem;color:var(--text-secondary);margin:2px 0 0;">parámetros</p>
-            </div>
+        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-top:30px;margin-bottom:4px;">Mismo test externo (MEDDOCAN), dos generaciones</p>
+        <div class="mask-photo-compare" style="margin-top:10px;">
+          <div style="text-align:center;">
+            <p style="font-family:var(--font-display);font-weight:800;font-size:2.2rem;color:var(--text-dark);margin:0;">81,1<span style="font-size:1.1rem;">%</span></p>
+            <p class="mask-photo-compare__caption">F1 · DiSMed<br>(LSTM-LSTM-CRF+EMA)</p>
           </div>
-          <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:14px;">Evaluados por <em>few-shot learning</em> sobre dos bancos de pruebas — <strong>DiSMed</strong> y el challenge <strong>MEDDOCAN</strong> — con métricas propias de solapamiento (<em>overlap-based</em>) y similitud (<em>similarity-based</em>), pensadas para superar las limitaciones de las métricas de coincidencia exacta.</p>
+          <div class="mask-photo-compare__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>4 años después</span>
+          </div>
+          <div style="text-align:center;">
+            <p style="font-family:var(--font-display);font-weight:800;font-size:2.2rem;color:var(--blue-brand);margin:0;">82,8<span style="font-size:1.1rem;">%</span></p>
+            <p class="mask-photo-compare__caption">F1 · DiSMed-LLM<br>(Gemma-2 9B)</p>
+          </div>
         </div>
-
-        <div class="chart-card" style="padding:22px 4px 4px;">
-          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">Recall en la identificación de entidades</p>
-          <div data-chart="bars" data-items='[
-            {"label":"Informes radiológicos (BIMCV)","value":96.55,"suffix":"%","note":"Conjunto de entrenamiento propio de DiSMed."},
-            {"label":"MEDDOCAN — validación externa","value":69.86,"suffix":"%","note":"Historiales clínicos, comparando las tres mejores arquitecturas del challenge MEDDOCAN."}
-          ]'></div>
-        </div>
+        <p style="font-size:0.78rem;color:var(--text-secondary);text-align:center;margin-top:10px;">Gemma-2 9B, sin haber visto un solo informe de MEDDOCAN, iguala a DiSMed y gana +12,5 puntos de recall (69,2 %→81,7 %). A cambio, alucina alguna entidad; los modelos grandes casi no lo hacen (Gemma-2 9B: 0 % en DiSMed, solo <em>EMAIL</em> en MEDDOCAN).</p>
 
         <div class="project-card__links" style="margin-top:18px;">
           <a class="link-ext" href="https://doi.org/10.1186/s13326-021-00236-2" target="_blank" rel="noopener">DiSMed — Pérez-Díez, I. et al., J. Biomedical Semantics (2021) ↗</a>
+          <a class="link-ext" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8006627/" target="_blank" rel="noopener">DiSMed — texto completo en PMC ↗</a>
           <a class="link-ext" href="https://bimcv.cipf.es/bimcv-projects/dismed/" target="_blank" rel="noopener">Ficha del proyecto en BIMCV ↗</a>
           <a class="link-ext" href="https://github.com/BIMCV-CSUSP/DiSMed" target="_blank" rel="noopener">DiSMed en GitHub ↗</a>
           <a class="link-ext" href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.173750175.54269764/v1" target="_blank" rel="noopener">DiSMed-LLM — Alzate-Grisales, J.A. et al., preprint TechRxiv (2025) ↗</a>
@@ -196,10 +177,11 @@
 
       <div class="card project-card reveal" style="grid-column:1/-1;">
         <span class="tag">IMAGEN · 2D Y 3D</span>
-        <h3>Defacer — anonimización de imagen 2D y 3D</h3>
-        <p><strong>2D — Máscaras personalizadas:</strong> eliminación de anotaciones en texto sobre radiografías. <strong>3D — Eliminación facial:</strong> eliminación de información facial en resonancias cerebrales mediante Deep Learning.</p>
+        <h3>Anonimización de imagen 2D y 3D</h3>
+        <!-- <p><strong>2D — Máscaras personalizadas:</strong> eliminación de anotaciones en texto sobre radiografías. <strong>3D — Eliminación facial:</strong> eliminación de información facial en resonancias cerebrales mediante Deep Learning.</p> -->
         <div class="grid grid-2" style="margin-top:18px;">
           <div>
+            <p class="tag" style="margin-bottom:12px;">2D · MÁSCARAS PERSONALIZADAS</p>
             <div class="mask-photo-compare">
               <div>
                 <div class="media-frame" style="aspect-ratio:8/7;">
@@ -218,13 +200,14 @@
                 <p class="mask-photo-compare__caption">Después</p>
               </div>
             </div>
-            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">Defacer 2D — antes / después de la máscara personalizada</p>
+            <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:12px;">Eliminación de anotaciones en texto sobre radiografías.</p>
           </div>
           <div>
+            <p class="tag" style="margin-bottom:12px;">3D · ELIMINACIÓN FACIAL</p>
             <div class="media-frame contain" style="background:#000;">
               <img src="../assets/linea-1-anonimizacion/image33.jpeg" alt="Comparación 3D: Raw MRI Data frente a Defaced MRI result, con eliminación de los rasgos faciales tras el defacing">
             </div>
-            <p style="font-size:0.8rem;text-align:center;color:var(--text-secondary);margin-top:8px;">Defacer 3D — Raw MRI vs Defaced MRI</p>
+            <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:12px;">Eliminación de información facial en resonancias cerebrales mediante Deep Learning.</p>
           </div>
         </div>
       </div>

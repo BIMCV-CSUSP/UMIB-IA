@@ -56,21 +56,16 @@
   <div class="cover__blobs" aria-hidden="true"><img src="../assets/marca/icon-outline-white.png" alt="" class="cover__mark"><div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div></div>
   <div class="wrap">
     <p class="page-cover__breadcrumb reveal"><a href="../index.html">Inicio</a> / <a href="../lineas-de-trabajo.html">Líneas de trabajo</a> / Análisis de datos con IA</p>
-    <p class="eyebrow reveal">ANÁLISIS CON IA</p>
     <h1 class="reveal dot-accent">Análisis de datos con inteligencia artificial</h1>
     <p class="page-cover__intro reveal">Segmentación, clasificación, generación de informes, radiómica, aprendizaje federado y casos clínicos reales: así aplicamos la inteligencia artificial a la imagen médica.</p>
+    <nav class="subnav subnav--on-dark reveal" aria-label="Secciones de esta línea de trabajo">
+      <a href="#segmentacion">Segmentación</a>
+      <a href="#clasificacion">Clasificación</a>
+      <a href="#radiomica">Radiómica</a>
+      <a href="#federado">Aprendizaje federado</a>
+    </nav>
   </div>
 </header>
-
-<div class="wrap">
-  <nav class="subnav reveal" aria-label="Secciones de esta línea de trabajo">
-    <a href="#segmentacion">Segmentación</a>
-    <a href="#clasificacion">Clasificación</a>
-    <a href="#radiomica">Radiómica</a>
-    <a href="#federado">Aprendizaje federado</a>
-    <a href="#eeg">Señales EEG</a>
-  </nav>
-</div>
 
 <!-- 5.3.1 Segmentación -->
 <section id="segmentacion" class="subsection">
@@ -117,11 +112,51 @@
   <p class="eyebrow reveal">02 · CLASIFICACIÓN E INTERPRETABILIDAD DE MODELOS</p>
   <h2 class="reveal dot-accent" style="font-size:1.6rem;">De la imagen al hallazgo clínico</h2>
   <div class="grid grid-3 stagger" style="margin-top:24px;">
-    <div class="card project-card reveal">
+    <div class="card project-card reveal" style="grid-column:1/-1;">
       <span class="tag">REPORTES AUTOMÁTICOS</span>
-      <div class="media-frame"><div class="placeholder-shot">Mapa de calor + probabilidades de hallazgos<br>[Imagen pendiente: captura real del modelo]</div></div>
-      <h3>Generación automática de reportes</h3>
-      <p>Clasificación de hallazgos radiológicos (cardiomegalia, atelectasia, consolidación, nódulo, derrame pleural…) sobre radiografía de tórax, con probabilidad por hallazgo.</p>
+      <div class="split" style="align-items:center;gap:40px;">
+        <div>
+          <h3>Generación automática de reportes</h3>
+          <p>Clasificación de hallazgos radiológicos (cardiomegalia, atelectasia, consolidación, nódulo, derrame pleural…) sobre radiografía de tórax mediante una CNN entrenada extremo a extremo, con probabilidad estimada por hallazgo.</p>
+          <div class="media-frame contain" style="background:#fff;margin-top:18px;">
+            <img src="../assets/linea-3-analisis-ia/image61.gif" alt="Animación del funcionamiento de una capa convolucional: un filtro recorre la imagen de entrada y genera el mapa de características de salida">
+          </div>
+          <p class="mask-photo-compare__caption" style="margin-top:8px;">Cómo funciona una capa convolucional</p>
+          <div class="media-frame contain" style="background:#fff;margin-top:18px;">
+            <img src="../assets/linea-3-analisis-ia/image59.png" alt="Arquitectura de la red convolucional: bloques conv1 a conv5, capas totalmente conectadas fc6-fc8 y softmax final">
+          </div>
+          <p class="mask-photo-compare__caption" style="margin-top:8px;">Arquitectura de la CNN (tipo VGG)</p>
+        </div>
+        <div>
+          <div class="mask-photo-compare" style="margin-bottom:22px;">
+            <div>
+              <div class="media-frame contain" style="aspect-ratio:3/2;background:#fff;"><img src="../assets/linea-3-analisis-ia/image60-rx-original.png" alt="Radiografía de tórax original, sin procesar"></div>
+              <p class="mask-photo-compare__caption">Original</p>
+            </div>
+            <div class="mask-photo-compare__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Modelo</span>
+            </div>
+            <div>
+              <div class="media-frame contain" style="aspect-ratio:3/2;background:#fff;"><img src="../assets/linea-3-analisis-ia/image60-rx-preprocesada.png" alt="Mapa de activación superpuesto sobre la radiografía, resaltando las regiones asociadas a cada hallazgo"></div>
+              <p class="mask-photo-compare__caption">Mapa de activación</p>
+            </div>
+          </div>
+          <div class="chart-card" style="padding:0;">
+            <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">Probabilidad por hallazgo</p>
+            <div data-chart="bars" data-items='[
+              {"label":"Cardiomegalia","value":97.13,"suffix":"%"},
+              {"label":"Neumonía","value":96.65,"suffix":"%"},
+              {"label":"Patrón alveolar","value":95.91,"suffix":"%"},
+              {"label":"Infiltrados","value":95.83,"suffix":"%"},
+              {"label":"Consolidación","value":95.83,"suffix":"%"},
+              {"label":"Nódulo","value":70.09,"suffix":"%"},
+              {"label":"Atelectasia","value":68.81,"suffix":"%"},
+              {"label":"Derrame pleural","value":52.08,"suffix":"%"}
+            ]'></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="card project-card reveal">
       <span class="tag">ALZHEIMER · MRI</span>
@@ -147,7 +182,7 @@
   <h2 class="reveal dot-accent" style="font-size:1.6rem;">De la imagen a miles de características cuantitativas</h2>
   <p class="reveal max-w-prose">Extracción de una gran cantidad de características de las imágenes médicas mediante algoritmos de caracterización de datos, para alimentar modelos predictivos.</p>
   <div class="reveal media-frame contain" style="max-width:760px;margin:20px 0 36px;">
-    <img src="../assets/linea-3-analisis-ia/flujo radiomica.png" alt="Flujo de trabajo de radiómica: datos de entrada, extracción de características radiómicas (forma, primer orden, segundo orden), 1080 características por ROI, selección de características, entrenamiento y validación de modelos predictivos">
+    <img src="../assets/linea-3-analisis-ia/Methodology_prostata.png" alt="Flujo de trabajo de radiómica: datos de entrada, extracción de características radiómicas (forma, primer orden, segundo orden), 1080 características por ROI, selección de características, entrenamiento y validación de modelos predictivos">
   </div>
 
   <div class="grid grid-2 stagger">
@@ -171,9 +206,9 @@
           <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">Importancia de variables (SHAP, ilustrativo)</p>
         </div>
       </div>
-      <div class="media-frame contain reveal" style="max-width:760px;margin-top:24px;">
+      <!-- <div class="media-frame contain reveal" style="max-width:760px;margin-top:24px;">
         <img src="../assets/linea-3-analisis-ia/image67.png" alt="Pipeline de radiómica en 4 etapas: preprocesamiento y segmentación automática, extracción de características radiómicas, modelado con selección de características, e interpretación del modelo con SHAP">
-      </div>
+      </div> -->
     </div>
 
   </div>

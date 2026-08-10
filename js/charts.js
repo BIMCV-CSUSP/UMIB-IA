@@ -364,13 +364,14 @@
       if (hasIcons) {
         var badgeCy = boxTop + 19;
         if (nodes[i].icon) {
+          var isImg = isImageIcon(nodes[i].icon);
           var badge = document.createElementNS(svgNS, "circle");
           badge.setAttribute("cx", cx);
           badge.setAttribute("cy", badgeCy);
-          badge.setAttribute("r", 13);
+          badge.setAttribute("r", isImg ? 16 : 13);
           badge.setAttribute("class", "arch-node-badge");
           svg.appendChild(badge);
-          drawArchIcon(svg, svgNS, nodes[i].icon, cx, badgeCy, 15);
+          drawArchIcon(svg, svgNS, nodes[i].icon, cx, badgeCy, isImg ? 24 : 15);
         }
         labelY = boxTop + (nodes[i].sub ? 46 : 52);
         subY = boxTop + 60;
@@ -644,9 +645,29 @@
     svg.appendChild(alabel);
   }
 
+  // Un icono es "de imagen" si es una ruta a un archivo real (logo/captura
+  // recortada) en vez de una clave de ARCH_ICONS (pictograma vectorial).
+  function isImageIcon(key) {
+    return /\.(png|jpe?g|svg|webp)$/i.test(key);
+  }
+
   // Dibuja un pictograma de ARCH_ICONS centrado en (cx, cy) con el tamaño
-  // visual "size" (el path original está en un viewBox de 24x24).
+  // visual "size" (el path original está en un viewBox de 24x24). Si "key"
+  // es la ruta a una imagen real (logo/icono recortado de un asset propio),
+  // se incrusta tal cual mediante <image> en vez de trazar un path.
   function drawArchIcon(svg, svgNS, key, cx, cy, size) {
+    if (isImageIcon(key)) {
+      var img = document.createElementNS(svgNS, "image");
+      img.setAttributeNS("http://www.w3.org/1999/xlink", "href", key);
+      img.setAttribute("href", key);
+      img.setAttribute("x", cx - size / 2);
+      img.setAttribute("y", cy - size / 2);
+      img.setAttribute("width", size);
+      img.setAttribute("height", size);
+      img.setAttribute("preserveAspectRatio", "xMidYMid meet");
+      svg.appendChild(img);
+      return;
+    }
     var def = ARCH_ICONS[key];
     if (!def) return;
     var scale = size / 24;
