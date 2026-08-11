@@ -29,6 +29,12 @@ window.UMIB_PUBLICATIONS = [
   },
   {
     "year": "2026",
+    "title": "Radiomics and machine learning for Pfirrmann grade classification of intervertebral discs in lumbar MRI.",
+    "star": 0,
+    "html": "González-Martínez, S.; Alzate-Grisales, J.A.; Montell-Serrano, J.; García-García, F.; Domenech-Fernandez, J.; Mayor de Juan, C.; de la Iglesia-Vayá, M. <span class=\"pub-item__title\">\"Radiomics and machine learning for Pfirrmann grade classification of intervertebral discs in lumbar MRI.\"</span> <em>engrXiv</em> (2026). DOI: <a class=\"link-ext\" href=\"https://doi.org/10.31224/6278\" target=\"_blank\" rel=\"noopener\">10.31224/6278</a>"
+  },
+  {
+    "year": "2026",
     "title": "Clinically significant prostate cancer detection with deep learning in a multi-center magnetic resonance imaging study.",
     "star": 0,
     "html": "Alzate-Grisales, J.A.; Mora-Rubio, A.; Perán-Teruel, M.; Navarro Beltrán, A.; Ruiz Torres, C.; Osca García, J.M.; de la Iglesia-Vayá, M. <span class=\"pub-item__title\">\"Clinically significant prostate cancer detection with deep learning in a multi-center magnetic resonance imaging study.\"</span> <em>Scientific Reports</em>, 16(1), 10976 (2026). [2 citas] DOI: <a class=\"link-ext\" href=\"https://doi.org/10.1038/s41598-026-42214-7\" target=\"_blank\" rel=\"noopener\">10.1038/s41598-026-42214-7</a> — <em>(fe de erratas asociada: \"Correction: ...\", Scientific Reports 16, 13645, DOI: <a class=\"link-ext\" href=\"https://doi.org/10.1038/s41598-026-50501-6\" target=\"_blank\" rel=\"noopener\">10.1038/s41598-026-50501-6</a>)</em>"

@@ -63,19 +63,27 @@
 
 <!-- Bloque A: XNAT -->
 <section class="section">
-  <div class="wrap split">
+  <div class="wrap split" style="grid-template-columns:1fr 1.25fr;gap:44px;">
     <div class="reveal">
-      <p class="eyebrow">XNAT DE BIMCV</p>
-      <h2 class="dot-accent" style="font-size:1.7rem;">Repositorio abierto</h2>
+      <div class="head-with-logo" style="margin-bottom:18px;">
+        <div>
+          <p class="eyebrow">XNAT DE BIMCV</p>
+          <h2 class="dot-accent" style="font-size:1.7rem;margin-bottom:0;">Repositorio abierto</h2>
+        </div>
+        <a href="https://www.xnat.org/" target="_blank" rel="noopener" style="flex-shrink:0;">
+          <img src="../assets/linea-1-anonimizacion/xnat-logo.png" alt="XNAT" style="max-width:150px;width:100%;height:auto;">
+        </a>
+      </div>
       <p>Plataforma abierta donde se organiza, procesa y comparte imagen médica de proyectos colaborativos: permite organizar imágenes en proyectos, ejecutar procesos sobre imágenes archivadas y ofrece acceso multiusuario con permisos predefinidos.</p>
-      <div class="stats" style="grid-template-columns:repeat(3,1fr);margin-top:28px;">
-        <div class="stat"><span class="stat__value" data-count-to="47">0</span><span class="stat__label">Proyectos activos</span></div>
-        <div class="stat"><span class="stat__value" data-count-to="94000" data-count-prefix="+">0</span><span class="stat__label">Sujetos registrados</span></div>
-        <div class="stat"><span class="stat__value" data-count-to="180000" data-count-prefix="+">0</span><span class="stat__label">Sesiones de imagen</span></div>
+      <p style="margin-top:14px;"><a class="link-ext" href="https://www.xnat.org/" target="_blank" rel="noopener">Web oficial de XNAT ↗</a></p>
+      <div class="stats stats--compact" style="display:flex;flex-wrap:nowrap;gap:24px;margin-top:28px;">
+        <div class="stat"><span class="stat__value" data-count-to="80">0</span><span class="stat__label">Proyectos<br>activos</span></div>
+        <div class="stat"><span class="stat__value" data-count-to="171000" data-count-prefix="+">0</span><span class="stat__label">Sujetos<br>registrados</span></div>
+        <div class="stat"><span class="stat__value" data-count-to="266000" data-count-prefix="+">0</span><span class="stat__label">Sesiones de<br>imagen</span></div>
       </div>
     </div>
-    <div class="reveal media-frame contain">
-      <img src="../assets/linea-2-datalakes/Captura de interfaz XNAT BIMCV.png" alt="Interfaz web de XNAT/BIMCV mostrando el listado de proyectos activos y la actividad reciente de datos">
+    <div class="reveal media-frame contain" style="aspect-ratio:1157/854;margin-bottom:0px;">
+      <img src="../assets/linea-2-datalakes/xnat.png" alt="Interfaz web de XNAT/BIMCV mostrando el buscador de proyectos, el listado de proyectos de columna CESDA y el panel de actividad reciente de datos">
     </div>
   </div>
 </section>
@@ -86,12 +94,37 @@
     <p class="eyebrow reveal">BIMCV DATALAKE</p>
     <h2 class="reveal dot-accent">Conjuntos de datos destacados</h2>
     <p class="reveal max-w-prose">Repositorio para almacenar y proteger datos sin procesar o procesados. Acceso abierto en <a class="link-ext" href="https://bimcv.cipf.es/" target="_blank" rel="noopener">bimcv.cipf.es ↗</a>.</p>
-    <div class="grid grid-4 stagger" style="margin-top:28px;">
-      <div class="card reveal"><h3 style="font-size:1.05rem;">10k MIDAS</h3><p style="font-size:0.88rem;">Cohorte poblacional de imagen torácica.</p></div>
-      <a href="https://bimcv.cipf.es/bimcv-projects/padchest/" target="_blank" rel="noopener" class="card reveal"><h3 style="font-size:1.05rem;">PadChest</h3><p style="font-size:0.88rem;">Conjunto público de radiografías de tórax etiquetadas.</p><span class="link-ext" style="margin-top:10px;display:inline-flex;">Ver dataset ↗</span></a>
-      <a href="https://bimcv.cipf.es/bimcv-projects/bimcv-covid19/" target="_blank" rel="noopener" class="card reveal"><h3 style="font-size:1.05rem;">COVID-19</h3><p style="font-size:0.88rem;">Imagen pulmonar adquirida durante la pandemia.</p><span class="link-ext" style="margin-top:10px;display:inline-flex;">Ver dataset ↗</span></a>
-      <a href="https://bimcv.cipf.es/bimcv-projects/prostate/" target="_blank" rel="noopener" class="card reveal"><h3 style="font-size:1.05rem;">Prostate cancer</h3><p style="font-size:0.88rem;">Resonancia multiparamétrica con diagnóstico asociado.</p><span class="link-ext" style="margin-top:10px;display:inline-flex;">Ver dataset ↗</span></a>
-      <div class="card reveal"><h3 style="font-size:1.05rem;">10k · Alzheimer</h3><p style="font-size:0.88rem;">Cohorte longitudinal para deterioro cognitivo.</p></div>
+    <div class="grid datasets-grid stagger" style="margin-top:28px;">
+      <a href="https://bimcv.cipf.es/bimcv-projects/midas-2/" target="_blank" rel="noopener" class="card dataset-card reveal">
+        <div class="dataset-card__icon" aria-hidden="true">
+          <span class="icon-mask" style="-webkit-mask-image:url('../assets/linea-2-datalakes/spine_icon.png');mask-image:url('../assets/linea-2-datalakes/spine_icon.png');"></span>
+        </div>
+        <h3 style="font-size:1.15rem;">10k MIDAS</h3><p style="font-size:0.92rem;">Cohorte poblacional de imagen de columna vertebral.</p>
+      </a>
+      <a href="https://bimcv.cipf.es/bimcv-projects/padchest/" target="_blank" rel="noopener" class="card dataset-card reveal">
+        <div class="dataset-card__icon" aria-hidden="true">
+          <span class="icon-mask" style="-webkit-mask-image:url('../assets/linea-2-datalakes/lungs_icon.png');mask-image:url('../assets/linea-2-datalakes/lungs_icon.png');"></span>
+        </div>
+        <h3 style="font-size:1.15rem;">PadChest</h3><p style="font-size:0.92rem;">Conjunto público de radiografías de tórax etiquetadas.</p>
+      </a>
+      <a href="https://bimcv.cipf.es/bimcv-projects/bimcv-covid19/" target="_blank" rel="noopener" class="card dataset-card reveal">
+        <div class="dataset-card__icon" aria-hidden="true">
+          <span class="icon-mask" style="-webkit-mask-image:url('../assets/linea-2-datalakes/coronavirus_icon.png');mask-image:url('../assets/linea-2-datalakes/coronavirus_icon.png');"></span>
+        </div>
+        <h3 style="font-size:1.15rem;">COVID-19</h3><p style="font-size:0.92rem;">Imagen pulmonar adquirida durante la pandemia.</p>
+      </a>
+      <a href="https://bimcv.cipf.es/bimcv-projects/prostate/" target="_blank" rel="noopener" class="card dataset-card reveal">
+        <div class="dataset-card__icon" aria-hidden="true">
+          <span class="icon-mask" style="-webkit-mask-image:url('../assets/linea-2-datalakes/prostate_icon.png');mask-image:url('../assets/linea-2-datalakes/prostate_icon.png');"></span>
+        </div>
+        <h3 style="font-size:1.15rem;">Prostate cancer</h3><p style="font-size:0.92rem;">Resonancia multiparamétrica con diagnóstico asociado.</p>
+      </a>
+      <a href="https://bimcv.cipf.es/bimcv-projects/10k-bdbi-4-cv/" target="_blank" rel="noopener" class="card dataset-card reveal">
+        <div class="dataset-card__icon" aria-hidden="true">
+          <span class="icon-mask" style="-webkit-mask-image:url('../assets/linea-2-datalakes/brain_icon.png');mask-image:url('../assets/linea-2-datalakes/brain_icon.png');"></span>
+        </div>
+        <h3 style="font-size:1.15rem;">10k · Alzheimer</h3><p style="font-size:0.92rem;">Cohorte longitudinal para deterioro cognitivo.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -99,8 +132,8 @@
 <!-- Bloque C: OHIF -->
 <section class="section">
   <div class="wrap split">
-    <div class="reveal media-frame contain" style="order:2;">
-      <img src="../assets/linea-2-datalakes/image36.jpeg" alt="Visor OHIF-XNAT mostrando una radiografía de tórax con contornos (ROIs) de segmentación asistida">
+    <div class="reveal" style="order:2;">
+      <img src="../assets/linea-2-datalakes/image36.jpeg" alt="Visor OHIF-XNAT mostrando una radiografía de tórax con contornos (ROIs) de segmentación asistida" style="width:100%;height:auto;border-radius:14px;">
     </div>
     <div class="reveal" style="order:1;">
       <p class="eyebrow">OHIF</p>
@@ -119,7 +152,7 @@
     <p class="reveal"><a class="link-ext" href="https://github.com/BIMCV-CSUSP/MIDS" target="_blank" rel="noopener">Ver MIDS / XNAT2MIDS en GitHub ↗</a></p>
 
     <div class="reveal" style="margin-top:8px;">
-      <p style="font-size:0.8rem;color:var(--text-secondary);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;">Estructura de carpetas</p>
+      <p class="subhead">Estructura de carpetas</p>
       <div class="code-block">/DATASET-BIMCV-PROSTATA/
 <span class="dim">├──</span> dataset_description.json
 <span class="dim">├──</span> participants.tsv
@@ -134,36 +167,64 @@
 <span class="dim">│   └──</span> ses-02/ ...
 <span class="dim">└──</span> <span class="hl">sub-002/</span> ...</div>
     </div>
-  </div>
-</section>
 
-<!-- Bloque E: Modalidades -->
-<section class="section">
-  <div class="wrap">
-    <p class="eyebrow reveal">MODALIDADES SOPORTADAS POR MIDS</p>
-    <div class="reveal media-frame contain" style="max-width:640px;margin-bottom:28px;">
-      <img src="../assets/linea-2-datalakes/image38.png" alt="Banner MIDS con ejemplos de distintas modalidades de imagen médica: ecografía, MRI, angiografía, columna, PET, radiografía de mano y TC abdominal">
+    <div style="margin-top:40px;">
+      <p class="subhead reveal">Modalidades soportadas</p>
+      <div class="grid grid-3-2 stagger">
+        <div class="card reveal center"><div class="media-frame" style="max-width:210px;aspect-ratio:4/3;margin:0 auto 16px;"><img src="../assets/linea-2-datalakes/image41.jpeg" alt="Ejemplo de MRI cerebral sagital"></div><h3 style="font-size:1rem;">MRI</h3><p style="font-size:0.85rem;">Estructural, funcional, difusión y espectroscopía.</p></div>
+        <div class="card reveal center"><div class="media-frame" style="max-width:210px;aspect-ratio:4/3;margin:0 auto 16px;"><img src="../assets/linea-2-datalakes/image42.jpeg" alt="Ejemplo de radiografía de tórax"></div><h3 style="font-size:1rem;">RX</h3><p style="font-size:0.85rem;">Radiología convencional y proyecciones estándar.</p></div>
+        <div class="card reveal center"><div class="media-frame" style="max-width:210px;aspect-ratio:4/3;margin:0 auto 16px;"><img src="../assets/linea-2-datalakes/Tac-de-abdomen.jpg" alt="Ejemplo de tomografía axial computarizada"></div><h3 style="font-size:1rem;">CT</h3><p style="font-size:0.85rem;">Series volumétricas con reconstrucciones 3D.</p></div>
+        <div class="card reveal center"><div class="media-frame" style="max-width:210px;aspect-ratio:4/3;margin:0 auto 16px;"><img src="../assets/linea-2-datalakes/image44.jpeg" alt="Ejemplo de retinografía"></div><h3 style="font-size:1rem;">OCT</h3><p style="font-size:0.85rem;">Retinografía, autofluorescencia y OCT.</p></div>
+        <div class="card reveal center"><div class="media-frame" style="max-width:210px;aspect-ratio:4/3;margin:0 auto 16px;"><img src="../assets/linea-2-datalakes/image43.jpeg" alt="Ejemplo de imagen de anatomía patológica (microscopía de tejido teñido)"></div><h3 style="font-size:1rem;">AP</h3><p style="font-size:0.85rem;">Imagen microscópica de tejidos teñidos.</p></div>
+      </div>
     </div>
-    <div class="grid grid-4 stagger">
-      <div class="card reveal center"><div class="media-frame--sq media-frame contain" style="max-width:70px;margin:0 auto 14px;"><img src="../assets/linea-2-datalakes/image41.jpeg" alt="Ejemplo de MRI cerebral sagital"></div><h3 style="font-size:1rem;">MRI</h3><p style="font-size:0.85rem;">Estructural, funcional, difusión y espectroscopía.</p></div>
-      <div class="card reveal center"><div class="media-frame--sq media-frame contain" style="max-width:70px;margin:0 auto 14px;"><img src="../assets/linea-2-datalakes/image42.jpeg" alt="Ejemplo de radiografía de tórax"></div><h3 style="font-size:1rem;">RX</h3><p style="font-size:0.85rem;">Radiología convencional y proyecciones estándar.</p></div>
-      <div class="card reveal center"><div class="line-card__icon" style="margin:0 auto 14px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18" stroke="currentColor" stroke-width="1.6"/></svg></div><h3 style="font-size:1rem;">CT</h3><p style="font-size:0.85rem;">Series volumétricas con reconstrucciones 3D.</p></div>
-      <div class="card reveal center"><div class="media-frame--sq media-frame contain" style="max-width:70px;margin:0 auto 14px;"><img src="../assets/linea-2-datalakes/image44.jpeg" alt="Ejemplo de retinografía"></div><h3 style="font-size:1rem;">OCT</h3><p style="font-size:0.85rem;">Retinografía, autofluorescencia y OCT.</p></div>
-    </div>
-    <div class="grid grid-4 stagger" style="margin-top:24px;">
-      <div class="card reveal center"><div class="media-frame--sq media-frame contain" style="max-width:70px;margin:0 auto 14px;"><img src="../assets/linea-2-datalakes/image43.jpeg" alt="Ejemplo de imagen de anatomía patológica (microscopía de tejido teñido)"></div><h3 style="font-size:1rem;">AP</h3><p style="font-size:0.85rem;">Imagen microscópica de tejidos teñidos.</p></div>
-    </div>
-  </div>
-</section>
 
-<!-- Bloque F: retina antes/después -->
-<section class="section section--tight" style="background:var(--card);">
-  <div class="wrap">
-    <p class="eyebrow reveal">EJEMPLO PRÁCTICO</p>
-    <h2 class="reveal dot-accent" style="font-size:1.5rem;">De fotografías retinales sin estructurar a MIDS</h2>
-    <p class="reveal max-w-prose">Caso de uso real que muestra cómo un conjunto no estructurado de imágenes DICOM se transforma, mediante un pipeline en Python, en una estructura MIDS ordenada por sujeto y sesión.</p>
-    <div class="reveal media-frame contain" style="margin-top:20px;max-width:760px;">
-      <img src="../assets/linea-2-datalakes/diagrama carpetas.png" alt="Diagrama antes/después: DICOMDIR desordenado de fotografías retinales convertido mediante script Python a estructura MIDS ordenada por sub-XXX/ses-XXX">
+    <div style="margin-top:40px;">
+      <p class="subhead reveal">Ejemplo práctico</p>
+      <div class="card reveal">
+        <h3 style="font-size:1.25rem;">De fotografías retinales sin estructurar a MIDS</h3>
+        <p class="max-w-prose">Caso de uso real que muestra cómo un conjunto no estructurado de imágenes DICOM se transforma, mediante un pipeline en Python, en una estructura MIDS ordenada por sujeto y sesión.</p>
+
+        <div class="convert-compare">
+          <div>
+            <p class="subhead">Fotografías sin estructurar</p>
+            <div class="code-block code-block--sm"><span class="dim">📁</span> dicomdir/
+<span class="dim">├──</span> <span class="hl">1208200617178_22/</span>
+<span class="dim">│   ├──</span> <span class="file">1208200617178_22_8973.dcm</span>
+<span class="dim">│   ├──</span> <span class="file">1208200617178_22_8943.dcm</span>
+<span class="dim">│   ├──</span> <span class="file">1208200617178_22_2973.dcm</span>
+<span class="dim">│   ├──</span> <span class="file">1208200617178_22_8923.dcm</span>
+<span class="dim">│   ├──</span> <span class="file">1208200617178_22_4473.dcm</span>
+<span class="dim">│   └──</span> <span class="dim">… 6 archivos más</span>
+<span class="dim">├──</span> <span class="hl">1208200617178_23/</span>
+<span class="dim">├──</span> <span class="hl">1208200617178_24/</span>
+<span class="dim">└──</span> <span class="hl">1208200617178_25/</span></div>
+          </div>
+
+          <div class="convert-compare__arrow">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="../assets/linea-2-datalakes/image48.png" alt="Python" style="width:44px;height:44px;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <div>
+            <p class="subhead">Estructura MIDS</p>
+            <div class="code-block code-block--sm"><span class="dim">📁</span> mids_retinal_dataset/
+<span class="dim">├──</span> <span class="file">participants.tsv</span>
+<span class="dim">├──</span> <span class="hl">sub-000001/</span>
+<span class="dim">│   └──</span> ses-000001/
+<span class="dim">│       └──</span> mim-light/
+<span class="dim">│           └──</span> op/
+<span class="dim">│               ├──</span> <span class="file">…run-20082_bp-eye_lat-R_op.json</span>
+<span class="dim">│               ├──</span> <span class="file">…run-20082_bp-eye_lat-R_op.png</span>
+<span class="dim">│               ├──</span> <span class="file">…run-20083_bp-eye_lat-L_op.json</span>
+<span class="dim">│               └──</span> <span class="file">…run-20083_bp-eye_lat-L_op.png</span>
+<span class="dim">├──</span> <span class="file">sub-000001_sessions.tsv</span>
+<span class="dim">├──</span> <span class="hl">sub-000002/</span> ...
+<span class="dim">└──</span> <span class="hl">sub-000003/</span> ...</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -182,8 +243,7 @@
   <div class="wrap">
     <div class="footer__logos"><img src="../assets/marca/Convivencia 1 - UMIBIA - blanco - sin Barra.png" alt="Generalitat Valenciana · ACI·ARA · Fundació Fisabio · Imagen Biomédica e IA"></div>
     <div class="footer__grid">
-      <div><p class="footer__tagline">Unidad Mixta de Imagen Biomédica e Inteligencia Artificial · FISABIO-CIPF</p></div>
-      <div><h4>Sitio</h4><ul>
+      <div><h4>Navegación</h4><ul>
         <li><a href="../index.html">Inicio</a></li><li><a href="../lineas-de-trabajo.html">Líneas de trabajo</a></li>
         <li><a href="../resultados.html">Resultados</a></li><li><a href="../infraestructura.html">Infraestructura</a></li>
         <li><a href="../contacto.html">Contacto</a></li></ul></div>
@@ -193,7 +253,7 @@
         <li><a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener">GitHub — BIMCV-CSUSP ↗</a></li></ul></div>
       <div><h4>Contacto</h4><ul>
         <li><a href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></li><li>+34 961 925 700</li>
-        <li>Avda. de Catalunya, 21 · 46020 Valencia</li></ul></div>
+        <li>C/ Eduardo Primo Yúfera, 3 · 46024 València</li></ul></div>
     </div>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> UMIB-IA · Fundació Fisabio</span>

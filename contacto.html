@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="assets/marca/UMIBIA - color.png">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -62,41 +63,13 @@
 </header>
 
 <section class="section">
-  <div class="wrap split" style="align-items:flex-start;">
-    <form class="card reveal" style="grid-column:1;" onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-ok').hidden=false;">
-      <h2 style="font-size:1.3rem;margin-bottom:24px;">Formulario de contacto</h2>
-      <div class="form-grid">
-        <div class="field"><label for="f-name">Nombre y apellidos *</label><input id="f-name" name="name" type="text" required></div>
-        <div class="field"><label for="f-org">Institución / organización</label><input id="f-org" name="org" type="text"></div>
-        <div class="field"><label for="f-email">Correo electrónico *</label><input id="f-email" name="email" type="email" required></div>
-        <div class="field">
-          <label for="f-subject">Asunto</label>
-          <select id="f-subject" name="subject">
-            <option>Colaboración en investigación</option>
-            <option>Acceso a datos y datasets</option>
-            <option>Servicios y tarifas</option>
-            <option>Prensa y comunicación</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <div class="field full"><label for="f-message">Mensaje *</label><textarea id="f-message" name="message" rows="5" required></textarea></div>
-        <div class="field field--check full">
-          <input id="f-rgpd" type="checkbox" required>
-          <label for="f-rgpd">He leído y acepto la <a class="link-ext" href="https://fisabio.san.gva.es/" target="_blank" rel="noopener">política de privacidad de FISABIO</a> para el tratamiento de mis datos (RGPD). *</label>
-        </div>
-        <div class="full">
-          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-          <p id="form-ok" hidden style="margin-top:12px;color:var(--blue-brand);font-weight:700;font-size:0.88rem;">¡Gracias! Hemos recibido tu mensaje (demo — conectar a bimcv@fisabio.es).</p>
-        </div>
-      </div>
-    </form>
-
-    <div class="reveal" style="grid-column:2;display:flex;flex-direction:column;gap:20px;">
+  <div class="wrap split" style="align-items:stretch;">
+    <div class="reveal" style="grid-column:1;display:flex;flex-direction:column;gap:20px;">
       <div class="card">
         <h3 style="font-size:1.05rem;">Datos de contacto directo</h3>
         <p style="margin-top:14px;"><strong>Email general del servicio</strong><br><a class="link-ext" href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></p>
-        <p><strong>Líder de la Unidad (IP)</strong><br>María de la Iglesia Vayá — <a class="link-ext" href="mailto:maria.delaiglesia@fisabio.es">maria.delaiglesia@fisabio.es</a></p>
-        <p><strong>Dirección</strong><br>Avda. de Catalunya, 21 · 46020 Valencia, España</p>
+        <p><strong>Líder de la Unidad (IP)</strong><br>María de la Iglesia Vayá<br><a class="link-ext" href="mailto:maria.delaiglesia@fisabio.es">maria.delaiglesia@fisabio.es</a> · <a class="link-ext" href="mailto:delaiglesia_mar@gva.es">delaiglesia_mar@gva.es</a></p>
+        <p><strong>Dirección</strong><br>C/ Eduardo Primo Yúfera, 3 · 46024 València, España</p>
         <p><strong>Teléfono</strong><br>+34 961 925 700</p>
       </div>
 
@@ -105,10 +78,10 @@
         <p>Consulta la ficha completa de la Unidad en la web de FISABIO.</p>
         <a href="https://fisabio.san.gva.es/es/apoyo-a-la-investigacion/plataformas-y-servicios-cientifico-tecnicos/servicios-cientifico-tecnologicos/fisabio-cipf/" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:14px;">Ir a FISABIO-CIPF ↗</a>
       </div>
+    </div>
 
-      <div class="card" style="padding:0;overflow:hidden;">
-        <iframe title="Ubicación de UMIB-IA — Avda. de Catalunya, 21, Valencia" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.3850%2C39.4780%2C-0.3650%2C39.4880&layer=mapnik" style="width:100%;height:220px;border:0;display:block;" loading="lazy"></iframe>
-      </div>
+    <div class="reveal card" style="grid-column:2;padding:0;overflow:hidden;min-height:420px;">
+      <div id="contact-map" style="width:100%;height:100%;min-height:420px;" role="img" aria-label="Mapa de ubicación de UMIB-IA — C/ Eduardo Primo Yúfera, 3, Quatre Carreres, 46024 València"></div>
     </div>
   </div>
 </section>
@@ -117,8 +90,7 @@
   <div class="wrap">
     <div class="footer__logos"><img src="assets/marca/Convivencia 1 - UMIBIA - blanco - sin Barra.png" alt="Generalitat Valenciana · ACI·ARA · Fundació Fisabio · Imagen Biomédica e IA"></div>
     <div class="footer__grid">
-      <div><p class="footer__tagline">Unidad Mixta de Imagen Biomédica e Inteligencia Artificial · FISABIO-CIPF</p></div>
-      <div><h4>Sitio</h4><ul>
+      <div><h4>Navegación</h4><ul>
         <li><a href="index.html">Inicio</a></li><li><a href="lineas-de-trabajo.html">Líneas de trabajo</a></li>
         <li><a href="resultados.html">Resultados</a></li><li><a href="infraestructura.html">Infraestructura</a></li>
         <li><a href="contacto.html">Contacto</a></li></ul></div>
@@ -128,7 +100,7 @@
         <li><a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener">GitHub — BIMCV-CSUSP ↗</a></li></ul></div>
       <div><h4>Contacto</h4><ul>
         <li><a href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></li><li>+34 961 925 700</li>
-        <li>Avda. de Catalunya, 21 · 46020 Valencia</li></ul></div>
+        <li>C/ Eduardo Primo Yúfera, 3 · 46024 València</li></ul></div>
     </div>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> UMIB-IA · Fundació Fisabio</span>
@@ -137,6 +109,7 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="js/main.js"></script>
 </body>
 </html>

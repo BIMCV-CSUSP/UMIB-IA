@@ -191,6 +191,84 @@
     container.appendChild(list);
   }
 
+  /* ------------------------------------------------------------------------
+     Anillos de métrica (gauge): una circunferencia por resultado, con el valor
+     en el centro. Alternativa compacta a las barras cuando hay pocas cifras y
+     se quiere que el número sea el protagonista.
+     ------------------------------------------------------------------------ */
+  function buildGauges(container) {
+    var items = JSON.parse(container.getAttribute("data-items")); // [{label, value, sub}]
+    var svgNS = "http://www.w3.org/2000/svg";
+    var wrap = document.createElement("div");
+    wrap.className = "gauge-row";
+
+    items.forEach(function (it, idx) {
+      var cell = document.createElement("div");
+      cell.className = "gauge";
+
+      var R = 42, C = 2 * Math.PI * R;
+      var svg = document.createElementNS(svgNS, "svg");
+      svg.setAttribute("viewBox", "0 0 100 100");
+      svg.setAttribute("role", "img");
+      svg.setAttribute("aria-label", it.label + ": " + it.value + "%");
+
+      var track = document.createElementNS(svgNS, "circle");
+      track.setAttribute("cx", 50); track.setAttribute("cy", 50); track.setAttribute("r", R);
+      track.setAttribute("class", "gauge__track");
+      svg.appendChild(track);
+
+      var arc = document.createElementNS(svgNS, "circle");
+      arc.setAttribute("cx", 50); arc.setAttribute("cy", 50); arc.setAttribute("r", R);
+      arc.setAttribute("class", "gauge__arc");
+      arc.setAttribute("transform", "rotate(-90 50 50)");
+      arc.style.stroke = it.accent ? "var(--coral)" : "var(--blue-brand)";
+      arc.style.strokeDasharray = C;
+      arc.style.strokeDashoffset = C;
+      svg.appendChild(arc);
+
+      var val = document.createElementNS(svgNS, "text");
+      val.setAttribute("x", 50); val.setAttribute("y", 50);
+      val.setAttribute("text-anchor", "middle");
+      val.setAttribute("dominant-baseline", "central");
+      val.setAttribute("class", "gauge__value");
+      val.textContent = "0";
+      svg.appendChild(val);
+
+      cell.appendChild(svg);
+
+      var label = document.createElement("p");
+      label.className = "gauge__label";
+      label.textContent = it.label;
+      cell.appendChild(label);
+
+      if (it.sub) {
+        var sub = document.createElement("p");
+        sub.className = "gauge__sub";
+        sub.textContent = it.sub;
+        cell.appendChild(sub);
+      }
+      wrap.appendChild(cell);
+
+      container.__anim = container.__anim || [];
+      container.__anim.push(function () {
+        arc.style.transition = "stroke-dashoffset 1200ms cubic-bezier(.22,.61,.36,1) " + (idx * 120) + "ms";
+        arc.style.strokeDashoffset = C * (1 - Math.min(it.value, 100) / 100);
+        // el número sube acompasado con el arco
+        var t0 = null, dur = 1200;
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min((ts - t0) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          val.textContent = (it.value * eased).toFixed(1).replace(".", ",");
+          if (p < 1) requestAnimationFrame(step);
+        }
+        setTimeout(function () { requestAnimationFrame(step); }, idx * 120);
+      });
+    });
+
+    container.appendChild(wrap);
+  }
+
   function buildSHAP(container) {
     var items = JSON.parse(container.getAttribute("data-items")); // [{label, value}]
     var max = Math.max.apply(null, items.map(function (i) { return Math.abs(i.value); }));
@@ -687,6 +765,7 @@
   document.querySelectorAll("[data-chart='roc']").forEach(buildROC);
   document.querySelectorAll("[data-chart='shap']").forEach(buildSHAP);
   document.querySelectorAll("[data-chart='bars']").forEach(buildBars);
+  document.querySelectorAll("[data-chart='gauges']").forEach(buildGauges);
   document.querySelectorAll("[data-chart='arch-flow']").forEach(buildArchFlow);
 
   var chartNodes = document.querySelectorAll("[data-chart]");

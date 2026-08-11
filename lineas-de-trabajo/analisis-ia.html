@@ -79,28 +79,30 @@
       <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/image58.gif" alt="Animación de segmentación multiorgánica abdomino-pélvica en 3D a partir de TC: columna, pelvis, riñones, bazo e hígado"></div>
       <h3>Segmentación multiorgánica abdomino-pélvica</h3>
       <p>Segmentación 3D de múltiples estructuras (columna, pelvis, riñones, bazo, hígado) a partir de TC, con revisión conjunta del render volumétrico y los cortes axial, coronal y sagital.</p>
+      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1186/s12880-026-02206-5" target="_blank" rel="noopener">Segmentación abdominal robusta — Álvarez Llopis, N. et al., BMC Medical Imaging (2026) ↗</a></div>
     </div>
     <div class="card project-card reveal">
       <span class="tag">COLUMNA VERTEBRAL</span>
       <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/columna.gif" alt="Animación de reconstrucción 3D de la columna lumbar segmentada: vértebras, discos intervertebrales y raíces nerviosas"></div>
       <h3>Segmentación de columna vertebral</h3>
       <p>Delimitación automática de vértebras, discos intervertebrales, canal medular y tejidos blandos adyacentes sobre MRI sagital lumbar.</p>
+      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1016/j.artmed.2023.102559" target="_blank" rel="noopener">Segmentación de columna lumbar — Sáenz-Gamboa, J.J. et al., Artificial Intelligence in Medicine (2023) ↗</a></div>
     </div>
     <div class="card project-card reveal" style="grid-column:1/-1;">
       <span class="tag">CÁNCER DE PRÓSTATA</span>
-      <div class="grid grid-2" style="gap:12px;">
+      <div class="grid grid-2" style="gap:20px;max-width:900px;margin:0 auto;align-items:start;">
         <div>
-          <div class="media-frame contain" style="margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image51.png" alt="Comparación de segmentación de próstata por PI-RADS entre Ground Truth, SAM-UNETR, SwinUNETR, UNETR y UNET"></div>
+          <div class="media-frame contain" style="aspect-ratio:4/3;margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image51.png" alt="Comparación de segmentación de próstata por PI-RADS entre Ground Truth, SAM-UNETR, SwinUNETR, UNETR y UNET"></div>
           <p class="mask-photo-compare__caption">Comparativa 2D (PI-RADS)</p>
         </div>
         <div>
-          <div class="media-frame contain" style="margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image57.gif" alt="Animación de segmentación 3D de las zonas de la próstata, con render volumétrico y cortes axiales correspondientes"></div>
+          <div class="media-frame contain" style="aspect-ratio:4/3;margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image57.gif" alt="Animación de segmentación 3D de las zonas de la próstata, con render volumétrico y cortes axiales correspondientes"></div>
           <p class="mask-photo-compare__caption">Reconstrucción 3D</p>
         </div>
       </div>
-      <h3 style="margin-top:14px;">Segmentación de próstata (PI-RADS)</h3>
+      <h3 style="margin-top:14px;">Segmentación de Cáncer de Próstata Clínicamente Significativo</h3>
       <p>Comparativa de modelos de segmentación sobre MRI multiparamétrica (PI-RADS 2 a 5) y reconstrucción volumétrica 3D de las zonas prostáticas a partir de la segmentación por cortes.</p>
-      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1109/ACCESS.2023.3326882" target="_blank" rel="noopener">IEEE Access (2023) ↗</a></div>
+      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1109/ACCESS.2023.3326882" target="_blank" rel="noopener">SAM-UNETR — Alzate-Grisales, J.A. et al., IEEE Access (2023) ↗</a></div>
     </div>
   </div>
 </div>
@@ -118,12 +120,11 @@
         <div>
           <h3>Generación automática de reportes</h3>
           <p>Clasificación de hallazgos radiológicos (cardiomegalia, atelectasia, consolidación, nódulo, derrame pleural…) sobre radiografía de tórax mediante una CNN entrenada extremo a extremo, con probabilidad estimada por hallazgo.</p>
-          <div class="media-frame contain" style="background:#fff;margin-top:18px;">
-            <img src="../assets/linea-3-analisis-ia/image61.gif" alt="Animación del funcionamiento de una capa convolucional: un filtro recorre la imagen de entrada y genera el mapa de características de salida">
-          </div>
-          <p class="mask-photo-compare__caption" style="margin-top:8px;">Cómo funciona una capa convolucional</p>
-          <div class="media-frame contain" style="background:#fff;margin-top:18px;">
-            <img src="../assets/linea-3-analisis-ia/image59.png" alt="Arquitectura de la red convolucional: bloques conv1 a conv5, capas totalmente conectadas fc6-fc8 y softmax final">
+          <div style="position:relative;margin-top:12px;">
+            <div class="media-frame contain" style="background:#fff;margin:0;aspect-ratio:16/12;align-items:flex-end;">
+              <img src="../assets/linea-3-analisis-ia/image59.png" alt="Arquitectura de la red convolucional: bloques conv1 a conv5, capas totalmente conectadas fc6-fc8 y softmax final">
+            </div>
+            <img src="../assets/linea-3-analisis-ia/image61.gif" alt="Animación del funcionamiento de una capa convolucional: un filtro recorre la imagen de entrada y genera el mapa de características de salida" style="position:absolute;top:0;right:0;width:35%;max-width:210px;height:auto;mix-blend-mode:multiply;">
           </div>
           <p class="mask-photo-compare__caption" style="margin-top:8px;">Arquitectura de la CNN (tipo VGG)</p>
         </div>
@@ -158,18 +159,40 @@
         </div>
       </div>
     </div>
-    <div class="card project-card reveal">
-      <span class="tag">ALZHEIMER · MRI</span>
-      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/image63.png" alt="Mosaico de cortes sagitales de MRI cerebral con mapas de activación, comparando distintos niveles de severidad de Alzheimer"></div>
-      <h3>Niveles de severidad de Alzheimer</h3>
-      <p>Clasificación de MRI cerebral en <em>Early Mild Cognitive Impairment</em>, <em>Mild Cognitive Impairment</em> y <em>Alzheimer's Disease</em>.</p>
-    </div>
-    <div class="card project-card reveal">
+    <div class="card project-card reveal" style="grid-column:1/-1;">
       <span class="tag">PRÓSTATA · EXPLICABILIDAD</span>
-      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/image65.jpeg" alt="Grid de secuencias MRI de próstata (T2w, ADC, DWI) con guided backpropagation superpuesto sobre el área clínicamente significativa"></div>
       <h3>Cáncer de próstata clínicamente significativo</h3>
       <p>Clasificación combinando secuencias T2w, ADC map y DWI, con <em>guided backpropagation</em> para explicabilidad del modelo.</p>
-      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1038/s41598-026-42214-7" target="_blank" rel="noopener">Scientific Reports (2026) ↗</a></div>
+      <div class="grid grid-2" style="margin-top:18px;gap:20px;align-items:start;">
+        <div>
+          <div class="media-frame contain" style="aspect-ratio:1/1;margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image65.jpeg" alt="Grid de secuencias MRI de próstata (T2w, ADC, DWI) con guided backpropagation superpuesto sobre el área clínicamente significativa"></div>
+          <p class="mask-photo-compare__caption">Caso clínicamente significativo</p>
+        </div>
+        <div>
+          <div class="media-frame contain" style="aspect-ratio:1/1;margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image66.png" alt="Cuatro paneles de cortes axiales de próstata: (a) T2w, (b) ADC map, (c) DWI y (d) guided backpropagation, con la lesión clínicamente significativa marcada en rojo"></div>
+          <p class="mask-photo-compare__caption">Secuencias de entrada y <em>guided backpropagation</em></p>
+        </div>
+      </div>
+      <div class="project-card__links" style="margin-top:16px;"><a class="link-ext" href="https://doi.org/10.1038/s41598-026-42214-7" target="_blank" rel="noopener">Detección de csPCa — Alzate-Grisales, J.A. et al., Scientific Reports (2026) ↗</a></div>
+    </div>
+    <div class="card project-card reveal" style="grid-column:1/-1;">
+      <span class="tag">ALZHEIMER · MRI</span>
+      <h3>Niveles de severidad de Alzheimer</h3>
+      <p>Clasificación de MRI cerebral en <em>Early Mild Cognitive Impairment</em>, <em>Mild Cognitive Impairment</em> y <em>Alzheimer's Disease</em>, con mapas de activación superpuestos sobre los cortes sagitales.</p>
+      <div class="grid grid-3" style="margin-top:18px;gap:14px;">
+        <div>
+          <div class="media-frame contain" style="aspect-ratio:1/1;background:#000;margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image62.png" alt="Mosaico de cortes sagitales de MRI cerebral con mapas de activación en un caso de deterioro cognitivo leve temprano"></div>
+          <p class="mask-photo-compare__caption">Early Mild Cognitive Impairment</p>
+        </div>
+        <div>
+          <div class="media-frame contain" style="aspect-ratio:1/1;background:#000;margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image63.png" alt="Mosaico de cortes sagitales de MRI cerebral con mapas de activación en un caso de deterioro cognitivo leve"></div>
+          <p class="mask-photo-compare__caption">Mild Cognitive Impairment</p>
+        </div>
+        <div>
+          <div class="media-frame contain" style="aspect-ratio:1/1;background:#000;margin-bottom:6px;"><img src="../assets/linea-3-analisis-ia/image64.png" alt="Mosaico de cortes sagitales de MRI cerebral con mapas de activación en un caso de enfermedad de Alzheimer"></div>
+          <p class="mask-photo-compare__caption">Alzheimer's Disease</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -180,35 +203,189 @@
 <div class="wrap">
   <p class="eyebrow reveal">03 · RADIÓMICA</p>
   <h2 class="reveal dot-accent" style="font-size:1.6rem;">De la imagen a miles de características cuantitativas</h2>
-  <p class="reveal max-w-prose">Extracción de una gran cantidad de características de las imágenes médicas mediante algoritmos de caracterización de datos, para alimentar modelos predictivos.</p>
-  <div class="reveal media-frame contain" style="max-width:760px;margin:20px 0 36px;">
-    <img src="../assets/linea-3-analisis-ia/Methodology_prostata.png" alt="Flujo de trabajo de radiómica: datos de entrada, extracción de características radiómicas (forma, primer orden, segundo orden), 1080 características por ROI, selección de características, entrenamiento y validación de modelos predictivos">
+  <p class="reveal max-w-prose">Extracción de una gran cantidad de características de las imágenes médicas mediante algoritmos de caracterización de datos, para alimentar modelos predictivos. Todos nuestros estudios comparten el mismo flujo, implementado en un <em>framework</em> propio y reutilizable entre patologías y modalidades.</p>
+
+  <div class="radiomics-flow reveal">
+    <div class="radiomics-flow__step">
+      <span class="radiomics-flow__num">01</span>
+      <div class="radiomics-flow__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 10h16M9 6v12"/></svg></div>
+      <h4>Datos y manifiesto</h4>
+      <ul>
+        <li>CSV con rutas de imagen, máscaras de ROI y etiquetas</li>
+        <li>Multimodal: T2w, ADC, DWI, TC, MRI estructural</li>
+        <li>Agrupación por paciente para evitar fugas</li>
+      </ul>
+      <span class="radiomics-flow__tool">MIDS · XNAT</span>
+    </div>
+
+    <div class="radiomics-flow__step">
+      <span class="radiomics-flow__num">02</span>
+      <div class="radiomics-flow__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/><path d="M8.5 12.5c1.5-2 3.5-2 5 0s3.5 2 5 0"/></svg></div>
+      <h4>Preprocesado y segmentación</h4>
+      <ul>
+        <li>Normalización, remuestreo y armonización entre centros</li>
+        <li>Segmentación de la ROI, manual o asistida por IA</li>
+        <li>Parámetros derivados por <em>fingerprinting</em> del dataset</li>
+      </ul>
+      <span class="radiomics-flow__tool">SimpleITK</span>
+    </div>
+
+    <div class="radiomics-flow__step">
+      <span class="radiomics-flow__num">03</span>
+      <div class="radiomics-flow__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M4 14.5h16M9.5 4v16M15 4v16"/></svg></div>
+      <h4>Extracción de características</h4>
+      <ul>
+        <li>Forma, primer orden y textura: GLCM, GLRLM, GLSZM, GLDM, NGTDM</li>
+        <li>Filtros: original, LoG y wavelet (+ exponencial y logarítmico en MR)</li>
+        <li>Miles de características por ROI y modalidad</li>
+      </ul>
+      <span class="radiomics-flow__tool">PyRadiomics</span>
+    </div>
+
+    <div class="radiomics-flow__step">
+      <span class="radiomics-flow__num">04</span>
+      <div class="radiomics-flow__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="12" r="2.2"/><path d="M8 7l8 4M8 17l8-4"/></svg></div>
+      <h4>Selección y modelado</h4>
+      <ul>
+        <li>Selección dentro de cada <em>fold</em>, sin fuga de información</li>
+        <li>Random Forest, Gradient Boosting, SVM, Regresión Logística</li>
+        <li>Validación cruzada estratificada y repetida</li>
+      </ul>
+      <span class="radiomics-flow__tool">scikit-learn</span>
+    </div>
+
+    <div class="radiomics-flow__step">
+      <span class="radiomics-flow__num">05</span>
+      <div class="radiomics-flow__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M7.5 16l3.5-5 3 3 4.5-6.5"/></svg></div>
+      <h4>Resultados e interpretabilidad</h4>
+      <ul>
+        <li>AUROC y AUPRC con intervalos de confianza por <em>bootstrap</em></li>
+        <li>Curvas ROC y calibración sobre predicciones <em>out-of-fold</em></li>
+        <li>Importancia de variables con SHAP y LIME</li>
+      </ul>
+      <span class="radiomics-flow__tool">SHAP · LIME</span>
+    </div>
+  </div>
+
+  <div class="project-card__links reveal" style="margin:16px 0 36px;">
+    <a class="link-ext" href="https://github.com/BIMCV-CSUSP/general-radiomics-framework" target="_blank" rel="noopener">general-radiomics-framework en GitHub ↗</a>
   </div>
 
   <div class="grid grid-2 stagger">
     <div class="card project-card reveal" style="grid-column:1/-1;">
-      <span class="tag">COLUMNA LUMBAR</span>
-      <div class="media-frame contain"><img src="../assets/linea-3-analisis-ia/clasificación pfirrmann.png" alt="Pipeline de clasificación de la degeneración de discos lumbares: adquisición y segmentación, extracción y selección de características radiómicas, y análisis de resultados con curvas ROC y diagramas de caja"></div>
-      <h3>Clasificación de la degeneración de discos lumbares</h3>
-      <p>Pipeline completo: adquisición y segmentación de la columna lumbar → extracción y selección de características radiómicas → análisis de resultados con curvas ROC.</p>
-      <div class="project-card__links"><a class="link-ext" href="https://doi.org/10.1016/j.artmed.2023.102559" target="_blank" rel="noopener">Artificial Intelligence in Medicine (2023) ↗</a></div>
-    </div>
+      <span class="tag">COLUMNA LUMBAR · PFIRRMANN</span>
+      <h3>Graduación automática de la degeneración discal</h3>
+      <p>Graduación objetiva de la escala de Pfirrmann (I–V) sobre T2 sagital lumbar del dataset <strong>MIDAS</strong>: 717 sujetos, 25 hospitales, anotados por 3 expertos.</p>
 
-    <div class="card reveal" style="grid-column:1/-1;">
-      <span class="tag">ESQUIZOFRENIA</span>
-      <h3>Primeras alucinaciones vs. controles</h3>
-      <p>Cohorte de 187 sujetos control y 134 con primeras alucinaciones (sin diagnóstico de esquizofrenia). Segmentación cerebral con FreeSurfer (Aparc+ASeg), extracción de características con Pyradiomics, y clasificación con SVM, Regresión Logística y Random Forest — AUC hasta 0,939.</p>
-      <div class="split" style="margin-top:20px;align-items:flex-start;">
-        <div class="chart-card viz-root" data-chart="roc" data-series='[{"name":"SVM","auc":0.939},{"name":"Regresión Logística","auc":0.902},{"name":"Random Forest","auc":0.861}]'>
-          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:10px;">Curvas ROC (recreación ilustrativa del AUC publicado)</p>
+      <div class="media-frame contain" style="margin:20px 0 6px;aspect-ratio:16/7;">
+        <img src="../assets/linea-3-analisis-ia/clasificación pfirrmann.png" alt="Pipeline de clasificación de la degeneración de discos lumbares: adquisición y segmentación, extracción y selección de características radiómicas, y análisis de resultados con curvas ROC y diagramas de caja">
+      </div>
+
+      <div class="split" style="align-items:center;gap:36px;margin-top:22px;">
+        <div>
+          <p class="subhead">AUC de Gradient Boosting, el mejor modelo</p>
+          <div class="metric-row">
+            <div class="metric"><span class="metric__value metric__value--accent">0,944</span><span class="metric__label">Binaria · leve (I–III) vs avanzada (IV–V)</span></div>
+            <div class="metric"><span class="metric__value">0,873</span><span class="metric__label">Multiclase · grados I a V</span></div>
+          </div>
         </div>
-        <div class="chart-card viz-root" data-chart="shap" data-items='[{"label":"Volumen hipocampo","value":0.31},{"label":"Espesor corteza frontal","value":0.24},{"label":"Volumen amígdala","value":0.19},{"label":"Textura tálamo","value":0.14},{"label":"Volumen ventrículos","value":0.09}]'>
-          <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:14px;">Importancia de variables (SHAP, ilustrativo)</p>
+        <p style="font-size:0.86rem;margin:0;">Agrupar los grados en dos clases mitiga el desbalance —los grados I y V suponen menos del 5 % cada uno— y se alinea con el umbral clínicamente relevante entre degeneración temprana y avanzada.</p>
+      </div>
+
+      <div class="xai-note">
+        <div class="xai-note__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h4>Qué mira el modelo</h4>
+          <p>El análisis <strong>SHAP</strong> muestra que la decisión sigue la fisiología de la degeneración: los discos sanos son <strong>homogéneos, brillantes y esféricos</strong>; los degenerados pierden esfericidad y ganan heterogeneidad de textura. La esfericidad de la forma encabeza la importancia en todos los grados.</p>
+          <div class="xai-note__features">
+            <span>Sphericity</span><span>GLCM Correlation</span><span>NGTDM Contrast</span><span>GLSZM ZoneEntropy</span><span>Imc2</span>
+          </div>
         </div>
       </div>
-      <!-- <div class="media-frame contain reveal" style="max-width:760px;margin-top:24px;">
-        <img src="../assets/linea-3-analisis-ia/image67.png" alt="Pipeline de radiómica en 4 etapas: preprocesamiento y segmentación automática, extracción de características radiómicas, modelado con selección de características, e interpretación del modelo con SHAP">
-      </div> -->
+
+      <div class="project-card__links" style="margin-top:18px;">
+        <a class="link-ext" href="https://doi.org/10.31224/6278" target="_blank" rel="noopener">Graduación Pfirrmann — González-Martínez, S. et al., preprint engrXiv (2026) ↗</a>
+      </div>
+    </div>
+
+    <div class="card project-card reveal" style="grid-column:1/-1;">
+      <span class="tag">PRÓSTATA · MULTICÉNTRICO</span>
+      <h3>Detección de cáncer de próstata clínicamente significativo</h3>
+      <p>Radiómica de glándula completa sobre MRI biparamétrica (T2w, ADC, DWI) más biomarcadores clínicos, en la cohorte pública <strong>PI-CAI</strong>: 1.500 estudios, 3 centros, 28,3 % de prevalencia.</p>
+
+      <div class="split" style="align-items:center;gap:36px;margin:22px 0;">
+        <div>
+          <p class="subhead">AUROC por fuente de información</p>
+          <div class="metric-row">
+            <div class="metric"><span class="metric__value metric__value--accent">0,844</span><span class="metric__label">Radiómica + clínica</span></div>
+            <div class="metric"><span class="metric__value">0,828</span><span class="metric__label">Solo radiómica</span></div>
+            <div class="metric"><span class="metric__value">0,757</span><span class="metric__label">Solo clínica</span></div>
+            <div class="metric"><span class="metric__value" style="color:var(--text-secondary);">0,702</span><span class="metric__label">Centro no visto (LOCO)</span></div>
+          </div>
+        </div>
+        <p style="font-size:0.86rem;margin:0;">Combinar imagen y clínica evita <strong>37 biopsias por cada 100</strong> con un VPN de 0,90. La caída fuera de centro marca el límite: la transportabilidad debe demostrarse antes de desplegar.</p>
+      </div>
+
+      <div class="xai-note">
+        <div class="xai-note__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h4>Qué mira el modelo</h4>
+          <p>La firma es marcadamente de <strong>difusión</strong>: 80 de las características seleccionadas provienen de DWI, coherente con la restricción de difusión propia del tumor. Tres métodos de atribución independientes —SHAP, gradientes integrados y SHAP por permutación— convergen en las mismas variables, y al añadir clínica la <strong>densidad de PSA</strong> pasa a encabezar la lista.</p>
+          <p>Retroproyectadas voxel a voxel sobre la imagen, esas características se concentran <strong>sobre la lesión delineada</strong> en lugar de dispersarse por la glándula: el modelo captura un fenotipo real, no un artefacto de ajuste.</p>
+          <div class="xai-note__features">
+            <span>DWI GLCM Imc1 / Imc2</span><span>ADC TotalEnergy</span><span>DWI Skewness</span><span>GLRLM GrayLevelNonUniformity</span><span>PSA density</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-frame contain" style="background:#fff;margin:20px 0 6px;"><img src="../assets/linea-3-analisis-ia/fig_feature_maps_10322_1000328_map_only.png" alt="Mapas voxel a voxel de las características radiómicas más influyentes sobre la próstata, con el contorno de la glándula en cian y la lesión en verde"></div>
+      <p class="mask-photo-compare__caption">Mapas voxel a voxel de las características más influyentes · glándula en cian, lesión en verde</p>
+
+      <div class="project-card__links" style="margin-top:18px;">
+        <span class="link-ext" style="color:var(--text-secondary);">Radiómica de glándula completa en csPCa — en preparación</span>
+        <a class="link-ext" href="https://github.com/BIMCV-CSUSP/general-radiomics-framework" target="_blank" rel="noopener">Código y características publicadas ↗</a>
+      </div>
+    </div>
+
+    <div class="card project-card reveal" style="grid-column:1/-1;">
+      <span class="tag">ESQUIZOFRENIA</span>
+      <h3>Primeras alucinaciones vs. controles</h3>
+      <p>Radiómica cerebral sobre MRI estructural en <strong>134 sujetos con primeras alucinaciones</strong> —sin diagnóstico establecido de esquizofrenia— frente a 187 controles, con segmentación por regiones mediante FreeSurfer (Aparc+ASeg).</p>
+
+      <div class="media-frame contain" style="margin:20px 0 6px;aspect-ratio:16/8;">
+        <img src="../assets/linea-3-analisis-ia/image72.png" alt="Flujo del estudio de esquizofrenia: dataset de MRI cerebral, segmentación por regiones con FreeSurfer, extracción de características radiómicas tabuladas y clasificación">
+      </div>
+
+      <div class="split" style="align-items:center;gap:36px;margin-top:22px;">
+        <div>
+          <p class="subhead">AUC por modelo, fold óptimo</p>
+          <div class="metric-row">
+            <div class="metric"><span class="metric__value metric__value--accent">0,939</span><span class="metric__label">Regresión Logística</span></div>
+            <div class="metric"><span class="metric__value">0,932</span><span class="metric__label">Random Forest</span></div>
+            <div class="metric"><span class="metric__value">0,930</span><span class="metric__label">SVM</span></div>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:10px;">Naïve Bayes 0,906 · Gradient Boosting 0,901 · k-NN 0,887</p>
+        </div>
+        <p style="font-size:0.86rem;margin:0;">Los seis clasificadores convergen en un rango estrecho (0,89–0,94), lo que apunta a una señal robusta en las características más que a un modelo concreto. Los modelos lineales rinden al nivel de los ensembles, coherente con una firma de pocas variables bien separadas.</p>
+      </div>
+
+      <div class="xai-note">
+        <div class="xai-note__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h4>Qué mira el modelo</h4>
+          <p>El análisis <strong>SHAP</strong> muestra que la discriminación no se apoya en volúmenes ni en intensidades globales, sino en <strong>textura de alta frecuencia</strong>: descriptores GLCM y de primer orden calculados sobre subbandas <em>wavelet</em> y filtros LoG de cada región segmentada.</p>
+          <p>Las variables dominantes se concentran en unas pocas regiones concretas, con las de mayor peso aportando desplazamientos amplios en la predicción individual — una firma compacta y no difusa por todo el cerebro.</p>
+          <div class="xai-note__features">
+            <span>wavelet GLCM SumSquares</span><span>wavelet GLCM Imc1</span><span>firstorder Kurtosis</span><span>GLCM DifferenceEntropy</span><span>LoG 3 mm 10Percentile</span>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -257,8 +434,7 @@
   <div class="wrap">
     <div class="footer__logos"><img src="../assets/marca/Convivencia 1 - UMIBIA - blanco - sin Barra.png" alt="Generalitat Valenciana · ACI·ARA · Fundació Fisabio · Imagen Biomédica e IA"></div>
     <div class="footer__grid">
-      <div><p class="footer__tagline">Unidad Mixta de Imagen Biomédica e Inteligencia Artificial · FISABIO-CIPF</p></div>
-      <div><h4>Sitio</h4><ul>
+      <div><h4>Navegación</h4><ul>
         <li><a href="../index.html">Inicio</a></li><li><a href="../lineas-de-trabajo.html">Líneas de trabajo</a></li>
         <li><a href="../resultados.html">Resultados</a></li><li><a href="../infraestructura.html">Infraestructura</a></li>
         <li><a href="../contacto.html">Contacto</a></li></ul></div>
@@ -268,7 +444,7 @@
         <li><a href="https://github.com/BIMCV-CSUSP" target="_blank" rel="noopener">GitHub — BIMCV-CSUSP ↗</a></li></ul></div>
       <div><h4>Contacto</h4><ul>
         <li><a href="mailto:bimcv@fisabio.es">bimcv@fisabio.es</a></li><li>+34 961 925 700</li>
-        <li>Avda. de Catalunya, 21 · 46020 Valencia</li></ul></div>
+        <li>C/ Eduardo Primo Yúfera, 3 · 46024 València</li></ul></div>
     </div>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> UMIB-IA · Fundació Fisabio</span>

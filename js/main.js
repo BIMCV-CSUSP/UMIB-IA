@@ -112,4 +112,26 @@
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  /* ---------------- Mapa de contacto (Leaflet + CARTO Voyager, estilo minimalista) ---------------- */
+  var mapEl = document.getElementById("contact-map");
+  if (mapEl && window.L) {
+    var coords = [39.4523348, -0.3443940]; // C/ Eduardo Primo Yúfera, 3, Quatre Carreres, 46024 València
+    var map = L.map(mapEl, { scrollWheelZoom: false }).setView(coords, 16);
+
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      maxZoom: 19
+    }).addTo(map);
+
+    L.circleMarker(coords, {
+      radius: 10,
+      color: "#fff",
+      weight: 3,
+      fillColor: "#EE4266",
+      fillOpacity: 1
+    }).addTo(map)
+      .bindPopup("<strong>UMIB-IA · FISABIO-CIPF</strong><br>C/ Eduardo Primo Yúfera, 3<br>46024 València")
+      .openPopup();
+  }
 })();
