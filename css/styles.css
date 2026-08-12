@@ -1120,3 +1120,33 @@ p:last-child{ margin-bottom: 0; }
 }
 .metric__value--accent{ color: var(--coral); }
 .metric__label{ display: block; font-size: 0.76rem; color: var(--text-secondary); line-height: 1.35; margin-top: 7px; }
+
+/* ---------- Selector de idioma (ES / VA / EN) ---------- */
+.lang-switch{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+}
+.lang-switch__btn{
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: .04em;
+  color: var(--text-secondary);
+  padding: 5px 9px;
+  border-radius: var(--radius-pill);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.lang-switch__btn:hover{ color: var(--navy-800); }
+.lang-switch__btn.is-active{ background: var(--navy-800); color: #fff; }
+@media (max-width: 900px){
+  .lang-switch{ margin-left: auto; }
+}
+/* En el menú desplegable de móvil ocupa su propia línea */
+.nav__mobile .lang-switch{ margin: 14px 0 0; width: max-content; }
