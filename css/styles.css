@@ -1150,3 +1150,28 @@ p:last-child{ margin-bottom: 0; }
 }
 /* En el menú desplegable de móvil ocupa su propia línea */
 .nav__mobile .lang-switch{ margin: 14px 0 0; width: max-content; }
+
+/* ---------- Pósters de congresos ---------- */
+.poster-card{ display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.poster-card__thumb{
+  display: block;
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.poster-card__thumb img{
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  transition: transform var(--dur) var(--ease);
+}
+.poster-card:hover .poster-card__thumb img{ transform: scale(1.03); }
+.poster-card__body{ padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+.poster-card__venue{
+  font-size: 0.68rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--blue-brand); margin-bottom: 8px;
+}
+.poster-card__title{ font-family: var(--font-display); font-size: 0.98rem; line-height: 1.3; margin: 0 0 8px; }
+.poster-card__authors{ font-size: 0.8rem; color: var(--text-secondary); margin: 0 0 14px; line-height: 1.45; }
+.poster-card__link{ margin-top: auto; font-size: 0.8rem; font-weight: 700; color: var(--blue-brand); }
+.poster-card:hover .poster-card__link{ color: var(--coral); }

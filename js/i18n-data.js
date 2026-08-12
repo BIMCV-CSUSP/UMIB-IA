@@ -386,8 +386,9 @@ window.UMIB_I18N = {
     "Listado completo, por año": "Llistat complet, per any",
     "Todos los años": "Tots els anys",
     "CONGRESOS Y COMUNICACIONES": "CONGRESSOS I COMUNICACIONS",
-    "Próximamente": "Pròximament",
-    "Aún no disponemos de un listado de congresos y comunicaciones orales o pósteres. Esta sección se completará en cuanto el equipo lo aporte.": "Encara no disposem d'un llistat de congressos i comunicacions orals o pòsters. Aquesta secció es completarà quan l'equip ho aporte.",
+    "Pósteres presentados": "Pòsters presentats",
+    "Trabajos presentados por el equipo en congresos científicos. Pulsa sobre cualquiera para verlo a tamaño completo.": "Treballs presentats per l'equip en congressos científics. Prem sobre qualsevol per a veure'l a grandària completa.",
+    "Ver póster ↗": "Veure pòster ↗",
     "Datasets abiertos": "Datasets oberts",
     "Explora los conjuntos de datos abiertos de imagen médica poblacional gestionados por BIMCV.": "Explora els conjunts de dades oberts d'imatge mèdica poblacional gestionats per BIMCV.",
     "Ver nuestros datasets abiertos en BIMCV ↗": "Veure els nostres datasets oberts en BIMCV ↗",
@@ -409,8 +410,7 @@ window.UMIB_I18N = {
     "DiSMed — texto completo en PMC ↗": "DiSMed — text complet en PMC ↗",
     "Ver MIDS / XNAT2MIDS en GitHub ↗": "Veure MIDS / XNAT2MIDS en GitHub ↗",
     "general-radiomics-framework en GitHub ↗": "general-radiomics-framework en GitHub ↗",
-    "C/ Eduardo Primo Yúfera, 3 · 46024 València, España": "C/ Eduardo Primo Yúfera, 3 · 46024 València, Espanya",
-    "[Título pendiente] — [Congreso] — [Ciudad, año] — Comunicación oral [Título pendiente] — [Congreso] — [Ciudad, año] — Póster [Título pendiente] — [Congreso] — [Ciudad, año] — Póster": "[Títol pendent] — [Congrés] — [Ciutat, any] — Comunicació oral [Títol pendent] — [Congrés] — [Ciutat, any] — Pòster [Títol pendent] — [Congrés] — [Ciutat, any] — Pòster"
+    "C/ Eduardo Primo Yúfera, 3 · 46024 València, España": "C/ Eduardo Primo Yúfera, 3 · 46024 València, Espanya"
   },
 
   /* ====================================================================== */
@@ -789,8 +789,9 @@ window.UMIB_I18N = {
     "Listado completo, por año": "Full list, by year",
     "Todos los años": "All years",
     "CONGRESOS Y COMUNICACIONES": "CONFERENCES AND PRESENTATIONS",
-    "Próximamente": "Coming soon",
-    "Aún no disponemos de un listado de congresos y comunicaciones orales o pósteres. Esta sección se completará en cuanto el equipo lo aporte.": "We do not yet have a list of conferences, oral presentations or posters. This section will be completed as soon as the team provides it.",
+    "Pósteres presentados": "Posters presented",
+    "Trabajos presentados por el equipo en congresos científicos. Pulsa sobre cualquiera para verlo a tamaño completo.": "Work presented by the team at scientific conferences. Click any of them to view it full size.",
+    "Ver póster ↗": "View poster ↗",
     "Datasets abiertos": "Open datasets",
     "Explora los conjuntos de datos abiertos de imagen médica poblacional gestionados por BIMCV.": "Explore the open population medical imaging datasets managed by BIMCV.",
     "Ver nuestros datasets abiertos en BIMCV ↗": "See our open datasets at BIMCV ↗",
@@ -813,7 +814,6 @@ window.UMIB_I18N = {
     "Ver MIDS / XNAT2MIDS en GitHub ↗": "See MIDS / XNAT2MIDS on GitHub ↗",
     "general-radiomics-framework en GitHub ↗": "general-radiomics-framework on GitHub ↗",
     "C/ Eduardo Primo Yúfera, 3 · 46024 València, España": "C/ Eduardo Primo Yúfera, 3 · 46024 València, Spain",
-    "Naïve Bayes 0,906 · Gradient Boosting 0,901 · k-NN 0,887": "Naïve Bayes 0.906 · Gradient Boosting 0.901 · k-NN 0.887",
-    "[Título pendiente] — [Congreso] — [Ciudad, año] — Comunicación oral [Título pendiente] — [Congreso] — [Ciudad, año] — Póster [Título pendiente] — [Congreso] — [Ciudad, año] — Póster": "[Pending title] — [Conference] — [City, year] — Oral presentation [Pending title] — [Conference] — [City, year] — Poster [Pending title] — [Conference] — [City, year] — Poster"
+    "Naïve Bayes 0,906 · Gradient Boosting 0,901 · k-NN 0,887": "Naïve Bayes 0.906 · Gradient Boosting 0.901 · k-NN 0.887"
   }
 };
