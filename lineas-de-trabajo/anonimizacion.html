@@ -97,9 +97,11 @@
         <h3>Smart-Upload</h3>
         <p>Herramienta que orquesta la carga de archivos DICOM en XNAT: busca las imágenes en el directorio de origen, las limpia y descomprime, las envía a CTP para su anonimización y, una vez seguras, las sube a BIMCV a través de la red ARTERIAS Net. Soporta carga individual, por lotes, por departamento o de varios proyectos a la vez.</p>
 
+        <!-- Los rótulos de los diagramas van siempre en inglés, con independencia
+             del idioma de la página: es la convención en figuras científicas. -->
         <div class="arch-flow chart-card" style="padding:24px 8px 8px;" data-chart="arch-flow"
-             data-nodes='[{"label":"PACS","sub":"Selección de estudios","icon":"pacs"},{"label":"Smart-Upload","sub":"Limpieza y descompresión","icon":"upload"},{"label":"CTP","sub":"Anonimización DICOM","icon":"shield"},{"label":"XNAT","sub":"BIMCV · por proyecto","icon":"database"}]'
-             data-branch='{"from":2,"label":"Cuarentena","sub":"si falla la anonimización"}'
+             data-nodes='[{"label":"PACS","sub":"Study selection","icon":"pacs"},{"label":"Smart-Upload","sub":"Cleaning and decompression","icon":"upload"},{"label":"CTP","sub":"DICOM anonymisation","icon":"shield"},{"label":"XNAT","sub":"BIMCV · per project","icon":"database"}]'
+             data-branch='{"from":2,"label":"Quarantine","sub":"if de-identification fails"}'
              data-group='{"from":0,"to":2,"label":"ARTERIAS Net","includeBranch":true}'></div>
 
         <div class="grid grid-4" style="margin-top:8px;">

@@ -56,7 +56,7 @@
     svg.setAttribute("viewBox", "0 0 " + W + " " + H);
     svg.setAttribute("class", "roc-svg");
     svg.setAttribute("role", "img");
-    svg.setAttribute("aria-label", "Curvas ROC");
+    svg.setAttribute("aria-label", "ROC curves");
 
     function X(x) { return PAD + x * (W - PAD * 1.4); }
     function Y(y) { return H - PAD - y * (H - PAD * 1.6); }
@@ -73,7 +73,9 @@
     axisY.setAttribute("stroke", "var(--baseline)"); axisY.setAttribute("stroke-width", "1.5");
     svg.appendChild(axisY);
 
-    ["Especificidad ↓", "Sensibilidad ↑"].forEach(function (label, i) {
+    // Rótulos de eje en inglés en los tres idiomas del sitio: es la convención
+    // en figuras científicas y evita depender del motor de traducción.
+    ["1 − specificity", "Sensitivity"].forEach(function (label, i) {
       var t = document.createElementNS(svgNS, "text");
       t.setAttribute("fill", "var(--muted)");
       t.setAttribute("font-size", "10.5");
